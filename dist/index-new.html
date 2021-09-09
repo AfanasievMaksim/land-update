@@ -25,7 +25,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500&family=STIX+Two+Text:wght@600&display=swap&subset=vietnamese" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=vietnamese" rel="stylesheet">
-        <link rel="stylesheet" href="styles/index.css">
+        <link rel="stylesheet" href="styles/index.min.css">
     </head>
     <body class="blue no-vaucher">
         <!-- Google Tag Manager (noscript) -->
@@ -111,8 +111,8 @@
   <div class="container">
     <div class="section-row">
       <div class="section-column section-column--decarotion">
-        <img src="./img/new/intro-mob.png" alt="" class="intro-img intro-img--mob">
-        <img data-src="./img/new/intro.png" alt="" class="intro-img intro-img--desk lazy">
+        <img src="./img/new/intro-mob.png" width="563" height="552" alt="" class="intro-img intro-img--mob">
+        <img data-src="./img/new/intro.png" width="805" height="624" alt="" class="intro-img intro-img--desk lazy">
       </div>
       <div class="section-column section-column--intro">
         <h1 class="section-title">
@@ -126,7 +126,7 @@
         <p class="section-desc">
           646 căn hộ, dulex, penthouse và sky villa siêu sang giữa khu đô thị Thủ Thiêm Quận 2
         </p>
-        <button class="btn-new">
+        <button class="btn-new" data-toggle="modal" data-target="#modal-download-new">
           <img class="btn-new__icon" src="img/new/download-icon.svg" >
           <span class="btn-new__text">
             Tải về tổng quan dự án
@@ -1526,6 +1526,63 @@
     </div>
   </div>
 </div>
+
+<div class="modal modal-custom--new fade" id="modal-download-new" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-close">
+        <p class="modal-close__text">Close</p>
+        <button type="button" class="close modal-close__icon" data-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-column modal-column--content">
+        <div class="modal-action" data-dismiss="modal">
+          <img data-src="img/new/arrow-back.svg" class="modal-action__icon lazy">
+          <p class="modal-action__text">Click to go main screen</p>
+        </div>
+        <h2 class="modal-title">
+          Tải về tổng <br>
+          quan dự án
+        </h2>
+        <h3 class="modal-subtitle">
+          Vui lòng để lại số liên hệ và tải về tổng quan dự án chỉ với một cú nhấp chuột
+        </h3>
+        <form id="form-pdf-new" action="" class="modal-form form-pdf-new">
+          <input
+            type="text"
+            name="name"
+            placeholder="Tên khách hàng"
+            class="form-input new"
+          />
+          <div class="form-validation">
+            <input
+              type="text"
+              name="phone"
+              placeholder="Số điện thoại"
+              class="form-input new"
+            />
+            <div class="form-validation-error hidden">Please use correct phone number</div>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn-new modal__btn">
+              <span class="btn__text">
+                YÊU CẦU GỌI LẠI
+              </span>
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="modal-column modal-column--pdf-new">
+        <img data-src="img/new/book.png" class="modal__img lazy">
+        <div class="modal-info">
+          <div class="modal-pdf">
+            *Thời gian tải - 7 giây. PDF, 3MB
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 
         <div class="cta">
