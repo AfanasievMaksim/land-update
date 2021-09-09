@@ -1,0 +1,283 @@
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    color: inherit;
+}
+
+ul, li {
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    color: inherit;
+    list-style: none;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #000000;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+.ib {
+    display: inline-block;
+}
+
+img {
+    max-width: 100%;
+}
+.locked-scroll {
+    overflow: hidden;
+}
+
+br {
+    line-height: 0;
+    font-size: 0;
+    height: 0;
+}
+
+::-webkit-input-placeholder { color: #AAAAAA; }
+::-moz-placeholder          { color: #AAAAAA; }/* Firefox 19+ */
+:-moz-placeholder           { color: #AAAAAA; }/* Firefox 18- */
+:-ms-input-placeholder      { color: #AAAAAA; }
+
+////////
+input.section-filter__range {
+    opacity: 0;
+}
+.container {
+    width: 100%;
+    padding-right: 20px;
+    padding-left: 20px;
+    max-width: 1240px;
+    margin: 0 auto;
+
+    &--wp {
+        padding: 0;
+    }
+}
+
+.section-with-line {
+    padding-top: 30px;
+    border-top: 1px solid rgba(51, 51, 51, 0.1);
+
+    @include desktop {
+        padding-top: 50px;
+    }
+}
+
+.section-title {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 36px;
+    text-align: center;
+    color: #333333;
+}
+
+.section-separate {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 17px;
+}
+
+.section-subtitle {
+    margin-top: 17px;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    color: #333333;
+}
+
+.btn {
+    position: relative;
+    border-radius: 50px;
+    padding: 14px 9px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+
+    &__text {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 18px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #FFFFFF;
+    }
+}
+
+.btn-new {
+    position: relative;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    padding: 16px 32px;
+    font-family: 'Lexend', sans-serif;
+    display: inline-flex;
+    align-items: center;
+    background-color: #12BCEC;
+    transition: .3s;
+
+    &:hover {
+        background-color: #0E97BE;
+    }
+
+    &__icon {
+        width: 24px;
+        height: 24px;
+        margin-right: 10px;
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: 24px;
+        color: #FFFFFF;
+    }
+}
+
+.flickity-prev-next-button {
+    width: 49px;
+    height: 49px;
+    padding: 0;
+
+    svg {
+        display: none;
+    }
+
+    &.previous {
+        background-image: url('/img/arrow-prev.svg');
+        background-repeat: no-repeat;
+        background-position: left 19px center;
+    }
+
+    &.next {
+        background-image: url('/img/arrow-next.svg');
+        background-repeat: no-repeat;
+        background-position: right 19px center;
+    }
+}
+
+.flickity-page-dots .dot {
+    width: 8px;
+    height: 8px;
+    margin: 0 6px;
+    opacity: 1;
+    background: #D1D3D5;
+}
+
+.section-container {
+    width: 100%;
+    max-width: 1440px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.modal-custom {
+    .modal-dialog {
+        margin: 50px 12px 35px;
+        max-width: 477px;
+    
+        @include custom-media(501px) {
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        @include desktop {
+            margin: 1.75rem auto;
+            max-width: 954px;
+        }
+    }
+    
+    .modal-content {
+        border: none;
+        background: #FFFFFF;
+        border-radius: 4px;
+        min-height: 540px;
+    }
+    
+    .modal__close {
+        position: absolute;
+        width: 23px;
+        height: 23px;
+        top: -41px;
+        right: 0;
+        background-color: transparent;
+        outline: none;
+        padding: 0;
+        margin: 0;
+        border: none;
+        background-repeat: no-repeat;
+        background-image: url('/img/close-icon.svg');
+        background-size: contain;
+        cursor: pointer;
+
+        @include desktop {
+            width: 16px;
+            height: 16px;
+            top: 0;
+            right: -32px;
+        }
+    }
+
+    .modal-content {
+        @include desktop {
+            flex-direction: row;
+            align-items: stretch;
+        }
+    }
+
+    .modal-column {
+        @include desktop {
+            width: 50%;
+        }
+    }
+}
+
+.modal-backdrop.show {
+    opacity: 1;
+}
+.modal-backdrop {
+    background: rgba(25, 27, 25, 0.85);
+}
+
+input.valid {
+    background-color: rgb(210, 255, 199) !important;
+}
+
+input.typed {
+    background-color: rgb(250, 255, 189) !important;
+}
+
+.ink {
+    display: block;
+    position: absolute;
+    background: rgba(255,255,255,.3);
+    border-radius: 100%;
+    transform: scale(0);
+}
+.animate {
+    animation: ripple .65s linear;
+}
+
+@keyframes ripple {
+    100% { 
+        opacity:0;
+        transform:scale(2.5)
+    }
+}

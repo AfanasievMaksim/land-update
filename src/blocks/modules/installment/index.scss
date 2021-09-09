@@ -1,0 +1,60 @@
+.installment {
+  padding-bottom: 46px;
+
+  @include desktop {
+    padding-bottom: 81px;
+  }
+
+  .section-subtitle {
+    max-width: 449px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .section-items {
+    margin-top: 48px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    @include desktop {
+      margin-top: 127px;
+    }
+  }
+
+  .section-item {
+    flex-shrink: 0;
+    margin-bottom: 77px;
+    padding-right: 20px;
+    padding-left: 20px;
+    text-align: center;
+
+    @include desktop {
+      margin-bottom: 71px;
+    }
+
+    &__title {
+      font-weight: bold;
+      font-size: 26px;
+      line-height: 26px;
+    }
+
+    &__num {
+      font-size: 86px;
+    }
+
+    &__des {
+      margin-top: 31px;
+    }
+  }
+
+  .section-action {
+    width: 100%;
+    text-align: center;
+  }
+
+  .btn {
+    width: 252px;
+  }
+}

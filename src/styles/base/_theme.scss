@@ -1,0 +1,331 @@
+.blue {
+  .filter {
+    .section-btn {
+      border: 1px solid $main-color-blue;
+      color: $main-color-blue;
+    }
+  
+    .section-filter {
+      .colored {
+        color: $main-color-blue;
+      }
+  
+      &__floor {
+        &.active {
+          border-color: $main-color-blue;
+        }
+      }
+  
+      &__dropdown-title {
+        color: $main-color-blue;
+      }
+    }
+  
+    .irs--round {
+      .irs-bar {
+        background-color: $main-color-blue;
+  
+        @include desktop {
+          background-color: $main-color-blue;
+        }
+      }
+  
+      .irs-handle {
+        background-color: $main-color-blue;
+  
+        @include desktop {
+          background-color: $main-color-blue;
+        }
+      }
+    }
+  
+    .section-table {
+      &__row {
+        &.active {
+          .section-table__checkbox {
+            background-color: $main-color-blue;
+            border-color: $main-color-blue;
+          }
+        }
+      }
+    }
+  
+    &__checkbox {
+      &.active {
+        background-color: $main-color-blue;
+      }
+    }
+  }
+
+  .gallery {
+    .slider-nav {
+      .slide {
+        &::before {
+          border-bottom-color: $main-color-blue;
+        }
+  
+        &.is-selected {
+          .slide__overlay {
+            background-color: $main-color-blue;
+          }
+        }
+      }
+    }
+  }
+
+  .hypothec {
+    .irs--round {
+      .irs-bar {
+        background-color: $main-color-blue;
+      }
+  
+      .irs-handle {
+        background-color: $main-color-blue;
+  
+        @include desktop {
+          background-color: $main-color-blue;
+        }
+      }
+    }
+
+    .section-column__info-num {
+      &.js-prepayment {
+        color: $hypothec-color-first-blue;
+      }
+  
+      &.js-payment {
+        color: $hypothec-color-second-blue;
+      }
+  
+      &.js-percent {
+        color: $hypothec-color-last-blue; 
+      }
+    }
+  }
+
+  .intro {
+    .section-title {
+      .colored {
+        color: $main-color-blue;
+      }
+    }
+  
+    .section-column--form {
+      border: 2px solid $main-color-blue;
+    }
+  }
+
+  .presentation {
+    .section-border {
+      border: 1px solid $border-presentation-color-blue;
+    }
+  }
+
+  .modal-custom {
+    .modal-star {
+      .green {
+        color: $main-color-blue;
+      }
+    }
+
+
+    .modal-column--pdf {
+      background-color: $main-color-blue;
+    }
+
+    .modal-expert {
+      &__btn {
+        border: 1px solid $main-color-blue;
+        color: $main-color-blue;
+      }
+    }
+  }
+
+  .dash {
+    background-color: $main-color-blue;
+  }
+
+  .btn {
+    background-color: $main-color-blue;
+  }
+
+  .flickity-prev-next-button {
+    background-color: $main-color-blue;
+
+    &:hover {
+      background-color: $main-color-blue;
+    }
+  }
+
+  .flickity-page-dots .dot {
+    &.is-selected {
+      background-color: $main-color-blue;
+    }
+  }
+}
+
+.green {
+  .filter {
+    .section-btn {
+      border: 1px solid $main-color-green;
+      color: $main-color-green;
+    }
+  
+    .section-filter {
+      .colored {
+        color: $main-color-green;
+      }
+  
+      &__floor {
+        &.active {
+          border-color: $main-color-green;
+        }
+      }
+  
+      &__dropdown-title {
+        color: $main-color-green;
+      }
+    }
+  
+    .irs--round {
+      .irs-bar {
+        background-color: $main-color-green;
+  
+        @include desktop {
+          background-color: $main-color-green;
+        }
+      }
+  
+      .irs-handle {
+        background-color: $main-color-green;
+  
+        @include desktop {
+          background-color: $main-color-green;
+        }
+      }
+    }
+  
+    .section-table {
+      &__row {
+        &.active {
+          .section-table__checkbox {
+            background-color: $main-color-green;
+            border-color: $main-color-green;
+          }
+        }
+      }
+    }
+  
+    &__checkbox {
+      &.active {
+        background-color: $main-color-green;
+      }
+    }
+  }
+
+  .gallery {
+    .slider-nav {
+      .slide {
+        &::before {
+          border-bottom-color: $main-color-green;
+        }
+  
+        &.is-selected {
+          .slide__overlay {
+            background-color: $main-color-green;
+          }
+        }
+      }
+    }
+  }
+
+  .hypothec {
+    .irs--round {
+      .irs-bar {
+        background-color: $main-color-green;
+      }
+  
+      .irs-handle {
+        background-color: $main-color-green;
+  
+        @include desktop {
+          background-color: $main-color-green;
+        }
+      }
+    }
+
+    .section-column__info-num {
+      &.js-prepayment {
+        color: $hypothec-color-first-green;
+      }
+  
+      &.js-payment {
+        color: $hypothec-color-second-green;
+      }
+  
+      &.js-percent {
+        color: $hypothec-color-last-green; 
+      }
+    }
+  }
+
+  .intro {
+    .section-title {
+      .colored {
+        color: $main-color-green;
+      }
+    }
+  
+    .section-column--form {
+      border: 2px solid $main-color-green;
+    }
+  }
+
+  .presentation {
+    .section-border {
+      border: 1px solid $border-presentation-color-green;
+    }
+  }
+
+  .modal-custom {
+    .modal-star {
+      .green {
+        color: $main-color-green;
+      }
+    }
+
+
+    .modal-column--pdf {
+      background-color: $main-color-green;
+    }
+
+    .modal-expert {
+      &__btn {
+        border: 1px solid $main-color-green;
+        color: $main-color-green;
+      }
+    }
+  }
+
+  .dash {
+    background-color: $main-color-green;
+  }
+
+  .btn {
+    background-color: $main-color-green;
+  }
+
+  .flickity-prev-next-button {
+    background-color: $main-color-green;
+
+    &:hover {
+      background-color: $main-color-green;
+    }
+  }
+
+  .flickity-page-dots .dot {
+    &.is-selected {
+      background-color: $main-color-green;
+    }
+  }
+}

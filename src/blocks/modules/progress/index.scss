@@ -1,0 +1,131 @@
+.progres {
+  padding-bottom: 43px;
+
+  @include desktop {
+    padding-bottom: 79px;
+  }
+
+  .section-items {
+    margin-right: -20px;
+    margin-left: -20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+
+    @include desktop {
+      margin: 0;
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+  .section-item {
+    margin-top: 37px;
+    padding-right: 20px;
+    padding-left: 20px;
+    flex-shrink: 0;
+
+    @include desktop {
+      padding: 0;
+      margin-right: 30px;
+    }
+
+    &--last {
+      width: 100%;
+      max-width: 590px;
+      margin-top: 88px;
+      
+      .section-item__des {
+        margin-top: 11px;
+      }
+
+      @include desktop {
+        margin-right: 0px;
+        margin-top: 37px;
+      } 
+    }
+
+    &__title {
+      font-size: 16px;
+      line-height: 26px;
+      color: rgba(51, 51, 51, 0.5);
+      margin-bottom: 3px;
+    }
+
+    &__des {
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 36px;
+      color: #333333;
+    }
+
+    &__progres {
+      position: relative;
+
+      img {
+        width: 64px;
+        position: absolute;
+        transform: translateX(-50%);
+        bottom: 5px;
+      }
+
+    }
+
+    &__progres-bar {
+      width: 100%;
+      height: 5px;
+      background: rgba(0, 0, 0, 0.1);
+      border-radius: 30px;
+      position: relative;
+    }
+
+    &__progres-bar--line {
+      left: 0;
+      bottom: 0;
+      position: absolute;
+      width: 92%;
+      height: 100%;
+      background-color: #FCB332;
+    }
+  }
+
+  .slider {
+    margin-top: 21px;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 1440px;
+    margin-right: auto;
+    margin-left: auto;
+
+    @include desktop {
+      margin-top: 32px;
+    }
+  }
+
+  .slide {
+    width: 70%;
+    max-width: 590px;
+    margin-right: 8px;
+    border-radius: 5px;
+    line-height: 0;
+    font-size: 0;
+    position: relative;
+
+    @include desktop {
+      margin-right: 20px;
+    }
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .flickity-prev-next-button {
+    &.previous {
+      left: 20px;
+    }
+
+    &.next {
+      right: 20px;
+    }
+  }
+}

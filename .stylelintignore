@@ -1,0 +1,3 @@
+./src/styles/vendor/import/*.scss
+./src/styles/base/*.scss
+./**/*.scss

@@ -1,0 +1,130 @@
+<section class="section-with-line hypothec">
+  <div class="container">
+    <h2 class="section-title">
+      Chính sách hỗ trợ ngân hàng tại Sunshine Horizon  
+    </h2>
+    <img data-src="img/section-decor.svg" alt="decorate element" class="section-separate lazy">
+
+    <h3 class="section-subtitle">
+      Với mục tiêu mang đến cơ hội sở hữu nhà ở dễ dàng tại Sài Gòn, Sunshine Horizon mang đến cho khách hàng cơ hội hỗ trợ vay 70% giá trị căn hộ với thời hạn trả góp lên đến 35 năm.
+    </h3>
+    <div class="section-calculator">
+      <div class="section-column section-column--first"> 
+        <div class="section-range">
+          <h4 class="section-range__title">
+            Giá trị nhà đất (tỷ VNĐ)
+          </h4>
+          <div class="section-column__row">
+            <div class="section-column__range section-column__range--cost"></div>
+            <input type="text" class="section-column__input section-column__input--cost" readonly>
+          </div>
+        </div>
+        <div class="section-range">
+          <h4 class="section-range__title">
+            Tỷ lệ vay (%)
+          </h4>
+          <div class="section-column__row">
+            <div class="section-column__range section-column__range--mortgage"></div>
+            <input type="text" class="section-column__input section-column__input--mortgage" readonly>
+          </div>
+        </div>
+        <div class="section-range">
+          <h4 class="section-range__title">
+            Thời hạn vay (năm)
+          </h4>
+          <div class="section-column__row">
+            <div class="section-column__range section-column__range--year"></div>
+            <input type="text" class="section-column__input section-column__input--year" readonly>
+          </div>
+        </div>
+        <div class="section-range">
+          <h4 class="section-range__title">
+            Lãi suất %/năm
+          </h4>
+          <div class="section-column__row section-column__row--select"> 
+            <select class="section-column__select">
+              <option value="7.6">Mặc định</option>
+              <option value="9.8">ACB</option>
+              <option value="8.5">SHB</option>
+              <option value="8.5">Sacombank</option>
+              <option value="8.5">KienLong Bank</option>
+              <option value="8.5">SeABank</option>
+              <option value="7.92">PG Bank</option>
+              <option value="7.9">Bac A Bank</option>
+              <option value="7.7">Vietinbank</option>
+              <option value="7.5">Vietcombank</option>
+              <option value="7.5">LienVietPostBank</option>
+              <option value="7.5">Shinhan Bank</option>
+              <option value="7.3">BIDC</option>
+              <option value="7.2">TPBank</option>
+              <option value="7">CBBank</option>
+              <option value="7">Public Bank Việt Nam</option>
+              <option value="6.99">Maritime Bank</option>
+              <option value="6.88">VRB</option>
+              <option value="6.68">Vietbank</option>
+              <option value="6.66">BAOVIET Bank</option>
+              <option value="6.5">Nam A Bank</option>
+            </select>
+            <input type="text" class="section-column__input section-column__input--bank" readonly>
+          </div>
+        </div>
+      </div>
+      <div class="section-column section-column--last">
+        <h4 class="section-column__title">
+          Kết quả
+        </h4>
+        <div class="secrion-column__row-last">
+          <div class="section-column__chart">
+            <div class="section-column__chart-info">
+              <div class="section-column__chart-num js-all-sum">3.86</div>
+              <div class="section-column__chart-currency">tỷ</div>
+            </div>
+            <canvas id="myChart" style="width: 100%; height: 100%;"></canvas>
+          </div>
+          <div class="section-column__info">
+            <div class="section-column__info-item">
+              <h5 class="section-column__info-title">
+                Cần trả trước:
+              </h5>
+              <p class="section-column__info-num js-prepayment">
+                160,000,000
+              </p>
+            </div>
+            <div class="section-column__info-item">
+              <h5 class="section-column__info-title">
+                Gốc cần trả:
+              </h5>
+              <p class="section-column__info-num js-payment">
+                640,000,000
+              </p>
+            </div>
+            <div class="section-column__info-item">
+              <h5 class="section-column__info-title">
+                Lãi cần trả:
+              </h5>
+              <p class="section-column__info-num js-percent">
+                943,413,333
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="section-column__result">
+          <div class="section-column__result-title">
+            Thanh toán <br> tháng đầu:
+          </div>
+          <div class="section-column__result-num js-result">
+            7,004,444
+          </div>
+        </div>
+      </div>
+      
+      <div class="section-action">
+        <button class="btn" data-toggle="modal" data-target="#modal-credit">
+          <span class="btn__text">
+            CHẤP NHẬN GÓI VAY
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

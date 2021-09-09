@@ -1,0 +1,163 @@
+<section class="section-with-line filter" id="filter">
+  <div class="container">
+    <h2 class="section-title">
+      Bảng giá và sơ đồ căn hộ tại Sunshine Horizon
+    </h2>
+    <img data-src="img/section-decor.svg" alt="decorate element" class="section-separate lazy" />
+    <h3 class="section-subtitle">
+      Khách hàng có thể chọn, đặt trước hay mua căn hộ chung cư tại Sunshin Horizon qua bảng giá sau đây.
+    </h3>
+
+    <div class="section-btn js-show-filter">
+      HIỂN THỊ BỘ LỌC
+    </div>
+
+    <div class="section-filter">
+      <div class="section-filter__header">
+        <h4 class="section-filter__title">
+          Lọc kết quả
+        </h4>
+        <div class="section-filter__close"></div>
+      </div>
+      <div class="section-filter__row section-filter__row--first">
+        <div class="section-filter__column">
+          <div class="section-filter__inner">
+            <p class="section-filter__des">
+              Số phòng ngủ
+            </p>
+            <div class="section-filter__floors">
+              <div class="section-filter__floor" data-room="0">S</div>
+              <div class="section-filter__floor" data-room="1">1</div>
+              <div class="section-filter__floor" data-room="2">2</div>
+              <div class="section-filter__floor" data-room="3">3</div>
+              <div class="section-filter__floor" data-room="4">4+</div>
+            </div>
+          </div>
+        </div>
+        <div class="section-filter__column">
+          <div class="section-filter__inner">
+            <div class="section-filter__row-head">
+              <p class="section-filter__des">
+                Giá,&nbsp;
+              </p>
+              <div class="section-filter__dropdown section-filter__dropdown--first">
+                <div
+                  class="section-filter__dropdown-title section-filter__dropdown-title--first"
+                  data-default="VND"
+                >
+                  VND
+                </div>
+                <div class="section-filter__dropdown-items">
+                  <div class="section-filter__dropdown-item" data-currency="VND">VND</div>
+                  <div class="section-filter__dropdown-item" data-currency="dolar">USD</div>
+                  <div class="section-filter__dropdown-item" data-currency="euro">EUR</div>
+                </div>
+              </div>
+              <div class="section-filter__dropdown">
+                <div
+                  class="section-filter__dropdown-title section-filter__dropdown-title--second"
+                  data-default="Tổng giá trị"
+                >
+                  Tổng giá trị
+                </div>
+                <div class="section-filter__dropdown-items">
+                  <div class="section-filter__dropdown-item" data-filter-area="false">Tổng giá trị</div>
+                  <div class="section-filter__dropdown-item" data-filter-area="true">Theo m2</div>
+                </div>
+              </div>
+            </div>
+            <div class="section-filter__inputs">
+              <input
+                type="text"
+                class="section-filter__input section-filter__input--price-min"
+                readonly
+              />
+              <input
+                type="text"
+                class="section-filter__input section-filter__input--price-max"
+                readonly
+              />
+            </div>
+            <input class="section-filter__range section-filter__range--price" />
+          </div>
+        </div>
+      </div>
+
+      <div class="section-filter__row">
+        <div class="section-filter__column">
+          <div class="section-filter__inner">
+            <p class="section-filter__des">Diện tích, <span class="colored">m2</span></p>
+            <div class="section-filter__inputs section-filter__inputs--small">
+              <input
+                type="text"
+                class="section-filter__input section-filter__input--area-min"
+                readonly
+              />
+              <input
+                type="text"
+                class="section-filter__input section-filter__input--area-max"
+                readonly
+              />
+            </div>
+            <input class="section-filter__range section-filter__range--area" />
+          </div>
+        </div>
+        <div class="section-filter__column section-filter__column--last">
+          <div class="section-filter__inner">
+            <p class="section-filter__des">
+              Tầng
+            </p>
+            <div class="section-filter__inputs section-filter__inputs--small">
+              <input
+                type="text"
+                class="section-filter__input section-filter__input--floor-min"
+                readonly
+              />
+              <input
+                type="text"
+                class="section-filter__input section-filter__input--floor-max"
+                readonly
+              />
+            </div>
+            <input class="section-filter__range section-filter__range--floor" />
+          </div>
+        </div>
+      </div>
+
+      <div class="section-filter__row section-filter__row--reset">
+        <div class="section-filter__reset">Xoá bộ lọc</div>
+      </div>
+    </div>
+
+    <div class="section-table">
+      <div class="section-table__header">
+        <div class="section-table__items">
+          <div class="section-table__item" data-sorting="room">Số phòng ngủ</div>
+          <div class="section-table__item" data-sorting="area">Diện tích</div>
+          <div class="section-table__item" data-sorting="floor">Tầng</div>
+          <div class="section-table__item" data-sorting="price">Giá</div>
+        </div>
+        <div class="section-table__search">Tìm thấy <span class="js-all-items">32</span> căn hộ</div>
+        <div class="section-table__reset">
+          Xoá bộ lọc
+        </div>
+      </div>
+      <div class="js-apend-item"></div>
+    </div>
+
+    <div class="section-search">
+      <div class="section-search__text">
+        Hiển thị thêm <span class="js-curent-items">10</span> trong
+        <span class="js-lost-items">22</span> căn hộ
+      </div>
+    </div>
+    <div class="section-download-btn">
+      <button class="btn" data-toggle="modal" data-target="#modal-filter">
+        <img src="img/btn-download.svg" alt="" />
+        <span class="btn__text">
+          TẢI VỀ TỔNG QUAN DỰ ÁN
+        </span>
+      </button>
+    </div>
+  </div>
+</section>

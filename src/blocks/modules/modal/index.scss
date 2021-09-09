@@ -1,0 +1,683 @@
+.modal-custom {
+  .modal-column--content {
+    padding: 15px 16px;
+
+    @include desktop {
+      padding: 55px 32px 20px;
+    }
+  }
+
+  .modal-title {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    color: #333333;
+    max-width: 259px;
+    margin-right: auto;
+    margin-left: auto;
+
+    @include desktop {
+      margin-left: 0;
+      max-width: none;
+      line-height: 44px;
+      text-align: left;
+    }
+  }
+
+  .modal-separate {
+    display: block;
+    margin: 17px auto;
+
+    @include desktop {
+      margin-top: 9px;
+      margin-bottom: 13px;
+      margin-left: 0;
+    }
+  }
+
+  .modal-subtitle {
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    color: #333333;
+    max-width: 288px;
+    margin-right: auto;
+    margin-left: auto;
+
+    @include desktop {
+      margin-left: 0;
+      max-width: none;
+      text-align: left;
+    }
+  }
+
+  .modal-form {
+    margin-top: 19px;
+    text-align: center;
+
+    @include desktop {
+      margin-top: 53px;
+      text-align: left;
+    }
+  }
+
+  .form-input {
+    width: 100%;
+    max-width: 320px;
+    margin-bottom: 25px;
+    height: 46px;
+    background: #F0F0F0;
+    border-radius: 10px;
+    padding: 10px 16px;
+    outline: none;
+    border: none;
+    color: #000000;
+    font-size: 16px;
+    line-height: 23px;
+  }
+
+  .form-actions {
+    width: 100%;
+    text-align: center;
+
+    @include desktop {
+      text-align: left;
+    }
+  }
+
+  .modal__btn {
+    width: 222px;
+  }
+
+  .modal-star {
+    margin-top: 21px;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 18px;
+    text-align: center;
+    color: #AAAAAA;
+
+    @include desktop {
+      text-align: left;
+    }
+  }
+
+  .modal-column--image {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    line-height: 0;
+  }
+
+  .modal-column--pdf {
+    height: 270px;
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%);
+    position: relative;
+    overflow: hidden;
+
+    .modal__img {
+      position: absolute;
+      max-width: none;
+      width: 350px;
+      top: 10px;
+      right: calc(50% - 188px);
+      transform: rotate(-7deg);
+
+      @include desktop {
+        width: 740px;
+        top: 50px;
+        right: -175px;
+      }
+    }
+
+    @include desktop {
+      min-height: 540px;
+    }
+  }
+
+  .modal-info {
+    position: absolute;
+    width: 100%;
+    bottom: 17px;
+    right: 0;
+  }
+
+  .modal-expert {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 36px;
+    color: #FFFFFF;
+  }
+
+  .modal-prof {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 29px;
+    color: #FFFFFF;
+    margin-top: -4px;
+  }
+
+  .modal-pdf {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 18px;
+    text-align: center;
+    color: #AAAAAA;
+  }
+
+  .modal-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @include desktop {
+      justify-content: space-between;
+      margin: 0 -17px;
+    }
+  }
+
+  .modal-image {
+    margin-top: 15px;
+
+    @include desktop {
+      width: calc(50% - 7px);
+    }
+  }
+
+  &#modal-filter {
+    @include desktop {
+      .modal-column--content {
+        width: 553px;
+        padding-top: 22px;
+        padding-bottom: 15px;
+      }
+    }
+  }
+
+  .modal-column--info {
+    padding: 30px 20px;
+
+    @include desktop {
+      width: 401px;
+      border-left: 1px solid rgba(51, 51, 51, 0.1);
+      ;
+      padding-left: 30px;
+      padding-top: 22px;
+    }
+
+    .modal-title {
+      margin-bottom: 20px;
+    }
+  }
+
+  .modal-dop-info {
+    width: 100%;
+    border: 1px solid rgba(51, 51, 51, 0.1);
+    border-left: none;
+    border-right: none;
+    display: flex;
+    justify-content: space-between;
+    font-size: 26px;
+    line-height: 26px;
+    color: #333333;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    .small {
+      font-size: 16px;
+    }
+  }
+
+  .modal-dop-floor {
+    @include desktop {
+      margin: auto;
+    }
+  }
+
+  .modal-price {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 26px;
+    color: #333333;
+  }
+
+  .modal-expert {
+    &__image {
+      display: block;
+      margin-top: 30px;
+      margin-right: auto;
+      margin-left: auto;
+
+      @include desktop {
+        margin-left: 0;
+      }
+    }
+
+    &__title {
+      text-align: center;
+      margin-top: 7px;
+      font-size: 20px;
+      line-height: 36px;
+      font-weight: 700;
+      color: #333333;
+
+      @include desktop {
+        text-align: left;
+      }
+    }
+
+    &__des {
+      text-align: center;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 26px;
+      color: #8C8D8D;
+      margin-top: -12px;
+
+      @include desktop {
+        text-align: left;
+      }
+    }
+
+    &__btn {
+      margin-top: 30px;
+      width: 222px;
+      padding: 13px 10px;
+      text-align: center;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 18px;
+      text-transform: uppercase;
+      margin-right: auto;
+      margin-left: auto;
+      cursor: pointer;
+
+      @include desktop {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &#modal-map {
+    .modal-content {
+      min-height: auto;
+    }
+
+    iframe {
+      height: 544px;
+    }
+  }
+
+  &#modal-thanks,
+  &#modal-thanks-pdf {
+    .modal-dialog {
+      max-width: 514px;
+    }
+
+    .modal-content {
+      flex-direction: column;
+      min-height: auto;
+      padding: 30px 20px 40px 20px;
+
+      @include desktop {
+        padding: 30px 30px 40px 30px;
+      }
+    }
+
+    .modal-title {
+      text-align: center;
+      max-width: none;
+      margin-left: auto;
+    }
+
+    .modal-separate {
+      margin-left: auto;
+    }
+
+    .modal-subtitle {
+      text-align: center;
+      max-width: none;
+      margin-left: auto;
+    }
+  }
+
+  &#modal-thanks-pdf {
+    .modal-title {
+      font-size: 22px;
+    }
+  }
+}
+
+.modal-fullscreen {
+  .modal-dialog {
+    max-width: 610px;
+
+    @media screen and (min-height: 630px) {
+      max-width: 954px;
+    }
+  }
+
+  .modal-slider {
+    min-height: 176px;
+  }
+
+  .modal-content {
+    width: 100%;
+    height: 100%;
+    min-width: 304px;
+    min-height: 176px;
+    background-color: transparent;
+    margin-top: 40px;
+
+    @include desktop {
+      margin-top: 0;
+    }
+  }
+
+  .modal__close {
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    top: -41px;
+    right: 0;
+    background-color: transparent;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background-repeat: no-repeat;
+    background-image: url('/img/close-icon.svg');
+    background-size: contain;
+    cursor: pointer;
+
+    @include desktop {
+      width: 16px;
+      height: 16px;
+      top: 0;
+      right: -32px;
+    }
+  }
+
+  .modal-slider {
+    &.active {
+      .slide {
+        visibility: visible;
+      }
+    }
+
+    &.activeOp {
+      .slide {
+        opacity: 1;
+      }
+    }
+  }
+
+  .slide {
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+.download-pdf-link-filter {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.modal-backdrop {
+  background: rgba(115, 115, 132, 0.55);
+  backdrop-filter: blur(10px);
+}
+
+.modal-custom--new {
+  font-family: 'Lexend', sans-serif;
+  color: #42424D;
+
+  .modal-dialog {
+    margin-right: 15px;
+    margin-left: 15px;
+
+    @include sm {
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    @include desktop {
+      margin-top: 110px;
+      max-width: 970px;
+    }
+  }
+
+  .modal-content {
+    border: 0;
+
+    @include desktop {
+      display: flex;
+      flex-direction: row;
+      min-height: 600px;
+      overflow: hidden;
+    }
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    font-size: 0;
+    cursor: pointer;
+
+    @include desktop {
+      display: inline-flex;
+      align-items: center;
+      top: 56px;
+      right: 53px;
+      z-index: 1;
+    }
+
+    &__text {
+      display: none;
+
+      @include desktop {
+        display: block;
+        margin-right: 8px;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 18px;
+        color: #FFFFFF;
+      }
+    }
+
+    &__icon {
+      width: 32px;
+      height: 32px;
+      font-size: 0;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      background-color: transparent;
+      border: 0;
+      background-repeat: no-repeat;
+      background-image: url("../img/new/close.svg");
+      cursor: pointer;
+    }
+  }
+
+  .modal-action {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+
+    @include desktop {
+      position: static;
+      margin-bottom: 47px;
+      margin-left: -13px;
+      display: inline-flex;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    &__icon {
+      @include desktop {
+        width: 32px;
+        margin-right: 8px;
+        cursor: pointer;
+      }
+    }
+
+    &__text {
+      display: none;
+
+      @include desktop {
+        display: block;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 18px;
+        color: #C0C0C8;
+      }
+    }
+  }
+
+  .modal-column--content {
+    padding: 90px 27px 30px;
+
+    @include desktop {
+      width: 500px;
+      padding: 56px 32px 20px 69px;
+    }
+  }
+
+  .modal-form {
+    max-width: 290px;
+  }
+
+  .modal-title {
+    margin-bottom: 16px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 38px;
+
+    @include desktop {
+      text-align: left;
+      max-width: 290px;
+    }
+  }
+
+  .modal-subtitle {
+    margin-bottom: 40px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+
+    @include desktop {
+      max-width: 290px;
+    }
+  }
+
+  .form-input {
+    width: 100%;
+    margin-bottom: 25px;
+    height: 56px;
+    padding: 19px 16px;
+    background: #F7F7F8;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    color: #737384;
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  .form-validation {
+    margin-bottom: 24px;
+  }
+
+  .form-validation .form-validation-error {
+    top: 60px;
+  }
+
+  .iti {
+    width: 100%;
+    padding-left: 110px;
+
+    .form-input {
+      padding-left: 16px !important;
+    }
+  }
+
+  .iti__flag-container {
+    min-width: 102px;
+  }
+
+  .iti--separate-dial-code .iti__selected-flag {
+    background: #F7F7F8;
+  }
+
+  .iti__selected-dial-code {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .iti__arrow {
+    width: 24px;
+    height: 24px;
+    border: 0;
+    background-image: url("../img/new/arrow-down-input.svg");
+  }
+
+  .form-actions {
+    text-align: center;
+
+    @include desktop {
+      text-align: left;
+    }
+  }
+
+  .modal-column--pdf-new {
+    height: 146px;
+    padding-top: 13px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    background: #12BCEC;
+    border-radius: 0px 0px 4px 4px;
+
+    @include desktop {
+      height: auto;
+      width: 470px;
+      padding-top: 497px;
+      border-radius: 0px 4px 4px 0px;
+      overflow: visible;
+    }
+  }
+
+  .modal__img {
+    width: 356px;
+    max-width: none;
+    position: absolute;
+    right: -60px;
+    top: 45px;
+    transform: rotate(-12.32deg);
+
+    @include desktop {
+      width: 627px;
+      top: 119px;
+      right: -86px;
+    }
+  }
+
+  .modal-info {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 18px;
+    color: #FFFFFF;
+  }
+}

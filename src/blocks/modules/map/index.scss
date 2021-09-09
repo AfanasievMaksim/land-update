@@ -1,0 +1,36 @@
+.map {
+  padding-bottom: 34px;
+  line-height: 0;
+
+  @include desktop {
+    padding-bottom: 52px;
+  }
+
+  .section-subtitle {
+    margin-bottom: 24px;
+    max-width: 540px;
+    margin-right: auto;
+    margin-left: auto;
+
+    @include desktop {
+      margin-bottom: 30px;
+    }
+  }
+
+  iframe {
+    @include desktop {
+      height: 544px;
+    }
+  }
+
+  .section-action {
+    width: 100%;
+    text-align: center;
+  }
+
+  .btn {
+    width: 158px;
+    position: relative;
+    margin-top: -23px;
+  }
+}

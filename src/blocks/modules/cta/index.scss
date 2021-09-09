@@ -1,0 +1,137 @@
+.cta {
+  &.active {
+    .cta-people {
+      transform: scale(0);
+      transition: .3s;
+    }
+    .cta-modal {
+      opacity: 1;
+      transition: .3s;
+      transition-delay: .3s;
+      pointer-events: auto;
+    }
+  }
+
+  .cta-people {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    z-index: 101;
+    transition: .3s;
+
+    &.active-num::before {
+      content: '1';
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 4px;
+      right: 4px;
+      color: #fff;
+      background-color: #e63917;
+      font-size: 11px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+    }
+  }
+
+  .cta-people__img {
+    display: block;
+    margin: 0 auto;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #a78267;
+  }
+
+  .cta-modal {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    z-index: 100;
+    opacity: 0;
+    width: 290px;
+    box-shadow: 0 17px 40px hsla(0,8%,36%,.26);
+    border-radius: 4px;
+    background: #fff;
+    padding: 50px 20px 30px;
+    transition: .3s;
+    pointer-events: none;
+  }
+
+  .cta-modal__close {
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    top: 15px;
+    right: 15px;
+    background-color: transparent;
+    outline: 0;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background-repeat: no-repeat;
+    background-image: url(/img/close-icon-black.svg);
+    background-size: contain;
+    cursor: pointer;
+  }
+
+  .cta-modal-img {
+    display: block;
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+  }
+
+  .cta-modal-title {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 500;
+  }
+
+  .cta-modal-subtitle {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    margin: 10px -20px 20px;
+    padding: 0 20px;
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid rgba(51,51,51,.1);
+  }
+
+  .cta-modal-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0;
+    line-height: 0;
+  }
+
+
+  .cta-modal-social__item {
+    margin: 0 6px;
+
+    img {
+      height: 29px;
+    }
+  }
+
+  .cta-modal-tel {
+    width: 100%;
+    margin-top: 20px;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 24px;
+    text-align: center;
+    color: #333333;
+  }
+}

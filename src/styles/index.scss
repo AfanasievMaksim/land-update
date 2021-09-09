@@ -1,0 +1,30 @@
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "helpers/functions";
+@import "vendor/libs";
+@import "base/general";
+@import "base/theme";
+@import "../blocks/modules-new";
+
+@import "vendor/import/intlTelInput";
+
+.form-validation {
+  position: relative;
+
+  .form-validation-error {
+    bottom: auto;
+    top: 50px;
+  }
+}
+
+.form-validation-error {
+  color: red;
+  font-size: 14px;
+  line-height: 14px;
+  position: absolute;
+  bottom: -16px;
+
+  &.hidden {
+    display: none;
+  }
+}
