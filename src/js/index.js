@@ -1194,3 +1194,36 @@ $(".form-pdf-new").on("submit", function (e) {
     $(this).find(".form-validation-error").removeClass("hidden");
   }
 });
+
+$('.modal-row-action, .modal-title__anchor').on( 'click', function(){ 
+  var el = $(this);
+  var dest = el.attr('href');
+
+  console.log($(dest).offset().top);
+
+  if(dest !== undefined && dest !== '') {
+    $('#modal-photos').animate({ 
+      scrollTop: $(dest).offset().top - $('html').scrollTop()
+    }, 500);
+  }
+  return false;
+});
+
+$('#modal-photos').on('scroll', function(e) {
+  const titles = $('#modal-photos .modal-column--info .modal-title')
+  const htmlScroll = $('html').scrollTop();
+  const intPhoto = $('#first-int').offset().top;
+  const extPhoto = $('#first-ext').offset().top;
+
+  if (intPhoto > 0 && extPhoto - htmlScroll > 0) {
+    if (!$(titles[0]).hasClass('active')) {
+      titles.removeClass('active');
+      $(titles[0]).addClass('active');
+    }
+  } else {
+    if (!$(titles[1]).hasClass('active')) {
+      titles.removeClass('active');
+      $(titles[1]).addClass('active');
+    }
+  }
+})

@@ -10,13 +10,29 @@
     z-index: 10;
   }
 
-  // &.active {
-  //   background: rgba(25, 27, 25, 0.95);
+  &.active {
+    .header-info__text {
+      display: none;
+    }
 
-  //   .header-info__text {
-  //     display: none;
-  //   }
-  // }
+    .container {
+      height: 64px;
+
+      @include desktop {
+        height: 72px;
+      }
+    }
+
+    .header-logo {
+      height: 46px;
+      .mob {
+        display: block;
+      }
+      .desk {
+        display: none;
+      }
+    }
+  }
 
   .container {
     height: 88px;
@@ -87,12 +103,15 @@
     width: 50px;
 
     @include desktop {
-      width: 131px;
+      width: 117px;
     }
 
     .mob {
       @include desktop {
         display: none;
+        height: 100%;
+        margin-right: auto;
+        margin-left: auto;
       }
     }
   }
