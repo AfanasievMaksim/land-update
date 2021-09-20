@@ -91,6 +91,15 @@
     }
   }
 
+  .btn-new {
+    margin-right: -49px;
+    margin-left: -49px;
+    @include tablet {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+
   .section-title {
     margin-bottom: 16px;
     font-weight: 600;

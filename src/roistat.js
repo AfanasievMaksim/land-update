@@ -13,7 +13,8 @@ document.addEventListener("DOMContentLoaded", function () {
         var isValidData = true;
 
         form.querySelectorAll("input").forEach(function (input) {
-          if (input.name == "phone" && form.id !== 'form-pdf-new') {
+          console.log();
+          if (input.name == "phone" && !form.classList.contains('form-new-design')) {
             var phoneValue = input.value;
             var phoneValues = phoneValue.split(" ");
 
@@ -23,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
             data.append(input.name, input.value.trim());
           }
 
-          if (form.id === 'form-pdf-new' && input.name == "phone") {
+          if (form.classList.contains('form-new-design') && input.name == "phone") {
             let iti = window.intlTelInputGlobals.getInstance(form.querySelector('input[name=phone]'))
 
             if (!iti.isValidNumber()) {
@@ -51,6 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
           { form_name: "filterForm", form_id: "form-filter" },
           { form_name: "filterBookingForm", form_id: "form-recall" },
           { form_name: "formDownloadPdfNew", form_id: "form-pdf-new" },
+          { form_name: "formBookJorney", form_id: "form-book" },
         ];
 
         formNames.forEach(function (row) {

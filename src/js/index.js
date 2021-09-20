@@ -116,6 +116,14 @@ $(document).ready(function () {
     ) {
       $(".filter .section-filter__dropdown-items").removeClass("active");
     }
+
+    if (
+      $(".threesixty__dropdown").hasClass("active") &&
+      !$(e.target).hasClass("threesixty__dropdown-title")
+    ) {
+      $(".threesixty__dropdown").removeClass("active");
+    }
+    
   });
 
   let showRecalModal = false;
@@ -995,8 +1003,8 @@ $(document).ready(function () {
     if ($(this).hasClass("js-mask-tel")) {
       $(this).parent().find(".form-validation-error").addClass("hidden");
       //$(this).addClass('typed');
-    } else if ($(this).closest('.form-pdf-new').length) {
-      $(this).closest('.form-pdf-new').find(".form-validation-error").addClass("hidden");
+    } else if ($(this).closest('.form-new-design').length) {
+      $(this).closest('.form-new-design').find(".form-validation-error").addClass("hidden");
       return
     } else {
       $(this).addClass("valid");
@@ -1170,7 +1178,7 @@ const numberValidator = (e) => {
   return iti.isValidNumber()
 }
 
-$(".form-pdf-new").on("submit", function (e) {
+$("#form-pdf-new").on("submit", function (e) {
   e.preventDefault();
 
   const formDataTel = $(this).find('input[name="phone"]');
@@ -1190,6 +1198,27 @@ $(".form-pdf-new").on("submit", function (e) {
     setTimeout(() => {
       window.open($(".download-pdf-link").attr("href"), "_blank");
     }, 500);
+  } else {
+    $(this).find(".form-validation-error").removeClass("hidden");
+  }
+});
+
+$("#form-book").on("submit", function (e) {
+  e.preventDefault();
+
+  const formDataTel = $(this).find('input[name="phone"]');
+  const formDataName = $(this).find('input[name="name"]');
+
+  if (numberValidator(e.currentTarget)) {
+    $(".modal").modal("hide");
+    formDataTel.val("");
+    formDataName.val("");
+    formDataTel.removeClass("valid");
+    formDataName.removeClass("valid");
+
+    setTimeout(() => {
+      $("#modal-thanks").modal("show");
+    }, 0);
   } else {
     $(this).find(".form-validation-error").removeClass("hidden");
   }
@@ -1227,3 +1256,79 @@ $('#modal-photos').on('scroll', function(e) {
     }
   }
 })
+
+//modal photo
+let showNewModal = '';
+
+$("#modal-photos .feature").on("click", function (e) {
+  showNewModal = $(this).data('modal');
+});
+
+$("#modal-photos").on("hidden.bs.modal", function (e) {
+  if (showNewModal) {
+    $(`#${showNewModal}`).modal("show");
+    showNewModal = '';
+  }
+});
+
+//360
+import screenfull from 'screenfull'
+
+$('#js-toogle-fullscreen').on('click', function() {
+  if (screenfull.isEnabled) {
+    screenfull.toggle(document.querySelector('.threesixty-container'));
+  }
+});
+
+screenfull.on('change', () => {
+  if (screenfull.isFullscreen) {
+    $('#js-toogle-fullscreen').addClass('open');
+  } else {
+    $('#js-toogle-fullscreen').removeClass('open');
+  }
+});
+
+$('.threesixty__dropdown').on('click', function() {
+  $(this).addClass('active');
+})
+
+$('.threesixty__dropdown-item').on('click', function() {
+  $('.threesixty__dropdown-item').removeClass('active');
+  $('.threesixty__dropdown-title').text($(this).text())
+  $(this).addClass('active');
+})
+
+// 3d
+// const ifwin = document.querySelector('.VR-layout').contentWindow;
+// let isInitDone = false;
+
+// console.log(ifwin);
+
+// const timer = setInterval(() => {
+//   console.log(123);
+//   if (isInitDone) {
+//     clearInterval(timer);
+//     return;
+//   } else {
+//     ifwin.postMessage({ type: 'buttons', action: 'init' }, '*');
+//   }
+// }, 100)
+
+
+// window.addEventListener("message", function(e) {
+//   let d = e.data;
+
+//   if (d.type !== 'buttons') return;
+
+//   if (d.action === 'init') {
+//     isInitDone = true;
+
+//     ifwin.postMessage({ type: 'buttons', action: 'movemode', name: 'Walk' }, '*');
+//   }
+
+//   // if (d.type === 'movemode') {
+//   //   ifwin.postMessage({ type: 'buttons', action: 'movemode', name: 'Orbit' }, '*');
+//   // }
+
+//   console.log('work', d);
+// });

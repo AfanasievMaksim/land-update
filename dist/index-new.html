@@ -25,7 +25,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500&family=STIX+Two+Text:wght@600&display=swap&subset=vietnamese" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=vietnamese" rel="stylesheet">
-        <link rel="stylesheet" href="styles/index.css">
+        <link rel="stylesheet" href="styles/index.min.css">
     </head>
     <body class="blue no-vaucher">
         <!-- Google Tag Manager (noscript) -->
@@ -144,7 +144,7 @@
             </p>
           </div>
         </div>
-        <div class="feature feature--layout">
+        <!-- <div class="feature feature--layout" data-toggle="modal" data-target="#modal-layouts">
           <div class="feature__decoration"></div>
           <div class="feature__content">
             <h3 class="feature__title">LAYOUTS <span class="colored">3D</span></h3>
@@ -161,8 +161,8 @@
               Some text text text text text text text
             </p>
           </div>
-        </div>
-        <div class="feature feature--360">
+        </div> -->
+        <div class="feature feature--360" data-toggle="modal" data-target="#modal-360">
           <div class="feature__decoration"></div>
           <div class="feature__content">
             <h3 class="feature__title">360° VIEW</h3>
@@ -1546,7 +1546,7 @@
         <h3 class="modal-subtitle">
           Vui lòng để lại số liên hệ và tải về tổng quan dự án chỉ với một cú nhấp chuột
         </h3>
-        <form id="form-pdf-new" action="" class="modal-form form-pdf-new">
+        <form id="form-pdf-new" action="" class="modal-form form-new-design">
           <input
             type="text"
             name="name"
@@ -1649,7 +1649,7 @@
         <div class="modal-row-see-also">
           <h3 class="modal-title">See also</h3>
           <div class="features">
-            <div class="feature feature--layout" data-dismiss="modal">
+            <!-- <div class="feature feature--layout" data-dismiss="modal">
               <div class="feature__decoration"></div>
               <div class="feature__content">
                 <h3 class="feature__title">LAYOUTS <span class="colored">3D</span></h3>
@@ -1666,8 +1666,8 @@
                   Some text text text text text text text
                 </p>
               </div>
-            </div>
-            <div class="feature feature--360" data-dismiss="modal">
+            </div> -->
+            <div class="feature feature--360" data-modal="modal-360" data-dismiss="modal">
               <div class="feature__decoration"></div>
               <div class="feature__content">
                 <h3 class="feature__title">360° VIEW</h3>
@@ -1676,7 +1676,7 @@
                 </p>
               </div>
             </div>
-            <div class="feature feature--presentation" data-dismiss="modal">
+            <div class="feature feature--presentation" data-modal="modal-download-new" data-dismiss="modal">
               <div class="feature__decoration"></div>
               <div class="feature__content">
                 <h3 class="feature__title">DOWNLOAD PRESENTATION</h3>
@@ -1700,6 +1700,177 @@
   </div>
 </div>
 
+<div class="modal modal-custom--fullscreen fade" id="modal-360" tabindex="-1" role="dialog" aria-hidden="true">
+  <div id="modal-top" class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-action" data-dismiss="modal">
+          <img data-src="img/new/arrow-back.svg" class="modal-action__icon lazy">
+          <p class="modal-action__text">Click to go main screen</p>
+        </div>
+        <div class="modal-close">
+          <p class="modal-close__text">Close</p>
+          <button type="button" class="close modal-close__icon" data-dismiss="modal" aria-label="Close"></button>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="threesixty">
+          <div class="threesixty-header">
+            <h3 class="modal-title">
+              Thu thiem 360° view
+            </h3>
+            <p class="threesixty-header__desk active">
+              THE GALLERIA
+            </p>
+          </div>
+          <div class="threesixty-container">
+            <div class="image-camera">
+              <img src="img/360/map/opera.jpg" alt="Map" width="310" height="190" />
+              <div class="image-dron-container">
+                <div class="image-dron-inner">
+                  <div class="image-dron">
+                    <img src="img/360/camera.svg" alt="dron" width="190" height="157" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="threesixty__dropdown active">
+              <div class="threesixty__dropdown-title">
+                May 2021
+              </div>
+              <div class="threesixty__dropdown-items">
+                <div class="threesixty__dropdown-item active">May 2021</div>
+                <div class="threesixty__dropdown-item">April 2021</div>
+              </div>
+            </div>
+            <div class="threesixty-images" id="js-threesixty-images">
+              <div class="fullscreen" id="js-toogle-fullscreen">
+                <img data-src="img/360/fullscreen-open.svg" class="lazy fullscreen-open" alt="">
+                <img data-src="img/360/fullscreen-close.svg" class="lazy fullscreen-close" alt="">
+              </div>
+              <div class="threesixty-images__loader">
+                <img data-src="img/360/loader.svg" class="lazy" alt="">
+                <p class="threesixty-images__loader-desk">
+                  Waiting please...
+                  <span class="js-loader-percent">0%</span>
+                </p>
+              </div>
+              <div class="threesixty-images__help">
+                <img data-src="img/360/help-finger.svg" class="lazy threesixty-images__help-image" alt="">
+                <p class="threesixty-images__help-text">
+                  Click and Drag to Move the Panorama Aroung
+                </p>
+              </div>
+              <div class="threesixty-images__container">
+                <img src="img/360/opera/05.05.21/1.jpg" alt="">
+              </div>
+            </div>
+            <div class="threesixty-actions">
+              <button class="btn-new" data-dismiss="modal" data-toggle="modal" data-target="#modal-jorney">
+                <span class="btn-new__text">
+                  Book 3D JOURNEY
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal modal-custom--small fade" id="modal-jorney" tabindex="-1" role="dialog" aria-hidden="true">
+  <div id="modal-top" class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-action" data-dismiss="modal">
+          <img data-src="img/new/arrow-back.svg" class="modal-action__icon lazy">
+        </div>
+        <div class="modal-header__title">
+          3D JOURNEY
+        </div>
+        <div class="modal-close">
+          <button type="button" class="close modal-close__icon" data-dismiss="modal" aria-label="Close"></button>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="modal-action-image">
+          <img data-src="img/new/journey.gif" class="lazy" alt="">
+        </div>
+        <div class="modal-info">
+          <p class="modal-info__text">
+            Инфо о ковид-19
+          </p>
+        </div>
+        <div class="modal-footnote">
+          <p class="modal-footnote__title">
+            ONLINE SALES GALLERY WITH BROKER
+          </p>
+          <p class="modal-footnote__text">
+            Book 3D JOURNEY with broker
+          </p>
+        </div>
+        <div class="modal-actions">
+          <button class="btn-new" data-dismiss="modal" data-toggle="modal" data-target="#modal-book-jorney">
+            <span class="btn-new__text">
+              Book
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal modal-custom--small fade" id="modal-book-jorney" tabindex="-1" role="dialog" aria-hidden="true">
+  <div id="modal-top" class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-action" data-dismiss="modal">
+          <img data-src="img/new/arrow-back.svg" class="modal-action__icon lazy">
+        </div>
+        <div class="modal-close">
+          <button type="button" class="close modal-close__icon" data-dismiss="modal" aria-label="Close"></button>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="modal-broker">
+          <img src="img/new/tina.png" alt="" width="150" height="150" class="lazy modal-broker__img">
+          <p class="modal-broker__title">
+            TINA TRUONG
+          </p>
+          <p class="modal-broker__text">
+            Book 3D JOURNEY with TINA
+          </p>
+        </div>
+        <form id="form-book" action="" class="modal-form form-new-design">
+          <input
+            type="text"
+            name="name"
+            placeholder="Tên khách hàng"
+            class="form-input new"
+          />
+          <div class="form-validation">
+            <input
+              type="text"
+              name="phone"
+              placeholder="Số điện thoại"
+              class="form-input new"
+            />
+            <div class="form-validation-error hidden">Please use correct phone number</div>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn-new modal__btn">
+              <span class="btn__text">
+                Send
+              </span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
 
 
         <div class="cta">
@@ -1725,7 +1896,7 @@
   </div>
 </div>
 
-        <script>
+        <!-- <script>
             var fired = false;
             window.addEventListener("scroll", function() {
                 if (fired === false) {
@@ -1740,7 +1911,7 @@
                 }, 1000)
                 }
             });
-        </script>
+        </script> -->
         <script>
             var costRangeStep = 1;
             var costRangeFrom = 0;

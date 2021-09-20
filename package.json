@@ -73,6 +73,8 @@
         "intl-tel-input": "^17.0.13",
         "ion-rangeslider": "^2.3.1",
         "jquery": "^3.4.1",
+        "marzipano": "^0.10.2",
+        "screenfull": "^5.1.0",
         "vanilla-lazyload": "^14.0.0"
     }
 }
