@@ -1328,11 +1328,13 @@ if (screenfull.isEnabled) {
       $('#js-toogle-fullscreen').removeClass('open');
     }
   });
+} else {
+  $('.threesixty').addClass('unsupported-fullscreen')
 }
 
 
 $('.threesixty__dropdown').on('click', function(e) {
-  $(this).addClass('active');
+  $(this).toggleClass('active');
 })
 
 $('.threesixty__dropdown-item').on('click', function(e) {
@@ -1341,6 +1343,7 @@ $('.threesixty__dropdown-item').on('click', function(e) {
   $(".threesixty__dropdown").removeClass("active");
   $('.threesixty__dropdown-title').text($(this).text())
   $('.threesixty-container').removeClass('loaded')
+  $('.threesixty-container').removeClass('touched');
   imageDownloaded = 0;
   imageData = $(this).data('imageFolder');
   imageIndex = 0;
@@ -1357,6 +1360,7 @@ $('.threesixty__dropdown-item').on('click', function(e) {
 
 $('#modal-360').on('shown.bs.modal', function () {
   renderImage()
+  $('.threesixty-container').removeClass('touched');
 })
 
 const handleDown = (e) => {

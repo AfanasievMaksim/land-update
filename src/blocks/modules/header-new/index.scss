@@ -224,14 +224,18 @@
 
     @include desktop {
       margin-right: 72px;
-    }
 
-    &__item {
-      // display: inline-block;
-      margin-left: 6px;
+      &.mob {
+        display: none;
+      }
 
-      img {
-        height: 29px;
+      &__item {
+        // display: inline-block;
+        margin-left: 6px;
+  
+        img {
+          height: 29px;
+        }
       }
     }
   }
