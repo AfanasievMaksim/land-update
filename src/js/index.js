@@ -1320,13 +1320,16 @@ $('#js-toogle-fullscreen').on('click', function() {
   }
 });
 
-screenfull.on('change', () => {
-  if (screenfull.isFullscreen) {
-    $('#js-toogle-fullscreen').addClass('open');
-  } else {
-    $('#js-toogle-fullscreen').removeClass('open');
-  }
-});
+if (screenfull.isEnabled) {
+  screenfull.on('change', () => {
+    if (screenfull.isFullscreen) {
+      $('#js-toogle-fullscreen').addClass('open');
+    } else {
+      $('#js-toogle-fullscreen').removeClass('open');
+    }
+  });
+}
+
 
 $('.threesixty__dropdown').on('click', function(e) {
   $(this).addClass('active');
