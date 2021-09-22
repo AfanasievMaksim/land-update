@@ -1631,6 +1631,15 @@
     margin-left: -24px;
     font-size: 0;
     line-height: 0;
+    min-height: 143px;
+
+    @include custom-media(375px) {
+      min-height: 168px;
+    }
+
+    @include custom-media(425px) {
+      min-height: 188px;
+    }
     
     img {
       width: 100%;
