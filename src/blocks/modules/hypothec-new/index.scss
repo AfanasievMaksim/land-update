@@ -109,7 +109,7 @@
     -moz-appearance: none;
     appearance: none;
     background-repeat: no-repeat;
-    background-image: url('../img/arrow-select.svg');
+    background-image: url('/img/arrow-select.svg');
     background-position: right 10px center;
     font-size: 14px;
 
@@ -302,7 +302,7 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        background-image: url('../img/range-lines.svg');
+        background-image: url('/img/range-lines.svg');
         background-repeat: no-repeat;
       }
 

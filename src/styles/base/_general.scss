@@ -161,13 +161,13 @@ input.section-filter__range {
     }
 
     &.previous {
-        background-image: url('../img/arrow-prev.svg');
+        background-image: url('/img/arrow-prev.svg');
         background-repeat: no-repeat;
         background-position: left 19px center;
     }
 
     &.next {
-        background-image: url('../img/arrow-next.svg');
+        background-image: url('/img/arrow-next.svg');
         background-repeat: no-repeat;
         background-position: right 19px center;
     }
@@ -223,7 +223,7 @@ input.section-filter__range {
         margin: 0;
         border: none;
         background-repeat: no-repeat;
-        background-image: url('../img/close-icon.svg');
+        background-image: url('/img/close-icon.svg');
         background-size: contain;
         cursor: pointer;
 

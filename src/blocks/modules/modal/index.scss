@@ -391,7 +391,7 @@
     margin: 0;
     border: none;
     background-repeat: no-repeat;
-    background-image: url('../img/close-icon.svg');
+    background-image: url('/img/close-icon.svg');
     background-size: contain;
     cursor: pointer;
 
@@ -504,7 +504,7 @@
       background-color: transparent;
       border: 0;
       background-repeat: no-repeat;
-      background-image: url("../img/new/close.svg");
+      background-image: url("/img/new/close.svg");
       cursor: pointer;
     }
   }
@@ -630,7 +630,7 @@
     width: 24px;
     height: 24px;
     border: 0;
-    background-image: url("../img/new/arrow-down-input.svg");
+    background-image: url("/img/new/arrow-down-input.svg");
   }
 
   .form-actions {
@@ -773,7 +773,7 @@
       background-color: transparent;
       border: 0;
       background-repeat: no-repeat;
-      background-image: url("../img/new/close.svg");
+      background-image: url("/img/new/close.svg");
       cursor: pointer;
     }
   }
@@ -938,7 +938,7 @@
       position: absolute;
       right: 24px;
       bottom: 16px;
-      background-image: url("../img/new/arrow-forward.svg");
+      background-image: url("/img/new/arrow-forward.svg");
       transition: .3s;
     }
 
@@ -949,7 +949,7 @@
       position: absolute;
       right: 24px;
       bottom: 16px;
-      background-image: url("../img/new/arrow-forward-white.svg");
+      background-image: url("/img/new/arrow-forward-white.svg");
       transition: .3s;
       opacity: 0;
     }
@@ -977,19 +977,19 @@
   }
 
   .feature--presentation .feature__decoration::before {
-    background-image: url('../img/new/intro-features-5.png');
+    background-image: url('/img/new/intro-features-5.png');
   }
 
   .feature--layout .feature__decoration::before {
-    background-image: url('../img/new/intro-features-2.png');
+    background-image: url('/img/new/intro-features-2.png');
   }
 
   .feature--tour .feature__decoration::before {
-    background-image: url('../img/new/intro-features-3.png');
+    background-image: url('/img/new/intro-features-3.png');
   }
 
   .feature--360 .feature__decoration::before {
-    background-image: url('../img/new/intro-features-4.png');
+    background-image: url('/img/new/intro-features-4.png');
   }
 
   .feature__decoration {
@@ -1281,7 +1281,7 @@
     font-size: 14px;
     line-height: 20px;
     color: #2B2B31;
-    background-image: url('../img/360/calendar.svg');
+    background-image: url('/img/360/calendar.svg');
     background-position: left center;
     background-repeat: no-repeat;
     background-size: 24px;
@@ -1294,7 +1294,7 @@
       right: 0;
       top: calc(50% - 12px);
       transition: .3s;
-      background-image: url("../img/360/dropdown-arrow.svg");
+      background-image: url("/img/360/dropdown-arrow.svg");
     }
   }
   .threesixty__dropdown-items {
@@ -1600,7 +1600,7 @@
       background-color: transparent;
       border: 0;
       background-repeat: no-repeat;
-      background-image: url("../img/new/close.svg");
+      background-image: url("/img/new/close.svg");
       cursor: pointer;
     }
   }
@@ -1772,7 +1772,7 @@
     width: 24px;
     height: 24px;
     border: 0;
-    background-image: url("../img/new/arrow-down-input.svg");
+    background-image: url("/img/new/arrow-down-input.svg");
   }
 
   .form-actions {
