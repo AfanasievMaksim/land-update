@@ -67,7 +67,7 @@
       top: 25px;
       right: 25px;
       background-repeat: no-repeat;
-      background-image: url('/img/close-icon-black.svg');
+      background-image: url('../img/close-icon-black.svg');
       background-size: cover;
       cursor: pointer;
     }
@@ -230,7 +230,7 @@
         transform: translateY(-50%);
         background-repeat: no-repeat;
         background-size: cover;
-        background-image: url('/img/dropdown-icon.svg');
+        background-image: url('../img/dropdown-icon.svg');
       }
     }
 
@@ -346,7 +346,7 @@
       color: #333333;
       padding-left: 30px;
       background-repeat: no-repeat;
-      background-image: url('/img/close-icon-black.svg');
+      background-image: url('../img/close-icon-black.svg');
       background-size: 15px 15px;
       background-position: left center;
       cursor: pointer;
@@ -393,7 +393,7 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        background-image: url('/img/range-lines.svg');
+        background-image: url('../img/range-lines.svg');
         background-repeat: no-repeat;
       }
 
@@ -455,7 +455,7 @@
           right: 0;
           top: 50%;
           transform: translateY(-50%);
-          background-image: url("/img/icon-arrow.svg");
+          background-image: url("../img/icon-arrow.svg");
           background-repeat: no-repeat;
         }
       }
@@ -491,7 +491,7 @@
       color: #333333;
       padding-left: 22px;
       background-repeat: no-repeat;
-      background-image: url('/img/close-icon-black.svg');
+      background-image: url('../img/close-icon-black.svg');
       background-size: 12px 12px;
       background-position: left center;
       cursor: pointer;
@@ -543,7 +543,7 @@
       position: absolute;
       left: 20px;
       top: 0;
-      background-image: url("/img/icon-checkbox.svg");
+      background-image: url("../img/icon-checkbox.svg");
       background-position: center;
       background-repeat: no-repeat;
     }
@@ -639,7 +639,7 @@
         transform: translateY(-50%);
         background-repeat: no-repeat;
         background-size: cover;
-        background-image: url('/img/dropdown-icon.svg');
+        background-image: url('../img/dropdown-icon.svg');
       }
 
       &.hidden {

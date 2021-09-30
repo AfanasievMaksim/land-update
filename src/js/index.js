@@ -1445,11 +1445,99 @@ $('.threesixty-images__container').on('touchmove', handleMove);
 $('.threesixty-images__container').on('mousedown', handleDown);
 $('.threesixty-images__container').on('touchend', handleUp);
 
-// 3d
-// const ifwin = document.querySelector('.VR-layout').contentWindow;
-// let isInitDone = false;
+// layouts
+const layoutsModal = $('#modal-layouts');
+const layoutsModalTitle = layoutsModal.find('.modal-title');
+const layoutsModalHeaderBtn = layoutsModal.find('.modal-action--second-screen')
+const apartmentsContainer = $('.js-apartments-body');
+const apartmentItem = apartmentsContainer.find('.layouts-section__apartment');
+const layoutsModalTabs = layoutsModal.find('.layouts-section__tabs');
+const layoutsModalTab = layoutsModalTabs.find('.layouts-section__tab');
+const layoutsModalTabContent = layoutsModal.find('.layouts-section__tab-content')
+let isActivated3d = false;
 
-// console.log(ifwin);
+const renderApartmentsInfo = (bed, bath, square, price) => {
+  $('.js-layout-desc-bed').find('span').text(bed)
+  $('.js-layout-desc-bath').find('span').text(bath)
+  $('.js-layout-desc-square').find('span').text(square)
+  $('.js-layout-desc-price').find('span').text(price)
+}
+
+const chngeModalTitle = (key) => {
+  const data = {
+    "intro": "Layouts of Opera Residence",
+    "2d": "2D Layout",
+    "3d": "<span style='color: #EC133A;'>3D</span> Layout",
+    "floor": "floor",
+    "photo": "photo",
+  }
+
+  if ($(window).width() < 1024) {
+    layoutsModalTitle.html(data[key])
+  } else {
+    layoutsModalTitle.html(data['intro'])
+  }
+}
+
+// layouts-section__tab-content
+const activateSecondScreen = () => {
+  layoutsModal.addClass('second-screen')
+}
+
+layoutsModalHeaderBtn.on('click', function() {
+  layoutsModal.removeClass('second-screen')
+})
+
+apartmentItem.on('click', function() {
+  $(this).addClass('active').siblings().removeClass('active');
+  const bed = $(this).data('bed')
+  const bath = $(this).data('bath')
+  const square = $(this).data('square')
+  const price = $(this).data('price')
+  const layout2d = $(this).data('layout-2d')
+  const layout3d = $(this).data('layout-3d')
+  renderApartmentsInfo(bed, bath, square, price)
+
+  chngeModalTitle(layoutsModalTabs.find('.layouts-section__tab.active').data('title'))
+
+  $('.js-layout-2d').attr('data-src', layout2d)
+  $('.js-layout-3d').attr('data-src', layout3d)
+  const activeLayoutItem = $('.layouts-section__tab-content.active').find('.js-layout-decor')
+  const layoutSrc = activeLayoutItem.attr('data-src');
+  activeLayoutItem.attr('src', layoutSrc);
+
+  activateSecondScreen()
+  isActivated3d = false
+})
+
+layoutsModalTab.on('click', function() {
+  $(this).addClass('active').siblings().removeClass('active');
+  layoutsModalTabContent.removeClass('active');
+  const activeTab = $(`#${($(this).data('tab'))}`);
+  const layoutSrc = activeTab.find('.js-layout-decor').attr('data-src');
+
+  console.log($(this).data('tab') === 'tab-3d' && !isActivated3d);
+  if ($(this).data('tab') === 'tab-3d') {
+    if (!isActivated3d) {
+      activeTab.find('.js-layout-decor').attr('src', layoutSrc);
+    }
+    isActivated3d = true
+  } else {
+    activeTab.find('.js-layout-decor').attr('src', layoutSrc);
+  }
+
+  activeTab.addClass('active');
+});
+
+$('[data-title]').on('click', function() {
+  chngeModalTitle($(this).data('title'))
+})
+
+// 3d
+const ifwin = document.querySelector('.VR-layout').contentWindow;
+let isInitDone = false;
+
+console.log(ifwin);
 
 // const timer = setInterval(() => {
 //   console.log(123);
@@ -1462,20 +1550,26 @@ $('.threesixty-images__container').on('touchend', handleUp);
 // }, 100)
 
 
-// window.addEventListener("message", function(e) {
-//   let d = e.data;
+window.addEventListener("message", function(e) {
+  let d = e.data;
 
-//   if (d.type !== 'buttons') return;
+  if (d.type !== 'buttons') return;
 
-//   if (d.action === 'init') {
-//     isInitDone = true;
+  if (d.action === 'init') {
+    isInitDone = true;
 
-//     ifwin.postMessage({ type: 'buttons', action: 'movemode', name: 'Walk' }, '*');
-//   }
+    ifwin.postMessage({ type: 'buttons', action: 'movemode', name: 'Walk' }, '*');
+  }
 
-//   // if (d.type === 'movemode') {
-//   //   ifwin.postMessage({ type: 'buttons', action: 'movemode', name: 'Orbit' }, '*');
-//   // }
+  // if (d.type === 'movemode') {
+  //   ifwin.postMessage({ type: 'buttons', action: 'movemode', name: 'Orbit' }, '*');
+  // }
 
-//   console.log('work', d);
-// });
+  console.log('work', d);
+});
+
+
+//tour
+$('.js-open-tour').on('click', function() {
+  $(this).closest('.tour-section__help').remove();
+});

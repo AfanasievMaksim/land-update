@@ -13,7 +13,9 @@ document.addEventListener("DOMContentLoaded", function () {
         var isValidData = true;
 
         form.querySelectorAll("input").forEach(function (input) {
-          console.log();
+          if (input.name == "name") {
+            data.append(input.name, input.value);
+          }
           if (input.name == "phone" && !form.classList.contains('form-new-design')) {
             var phoneValue = input.value;
             var phoneValues = phoneValue.split(" ");

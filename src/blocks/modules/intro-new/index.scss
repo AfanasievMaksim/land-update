@@ -207,7 +207,7 @@
       position: absolute;
       right: 24px;
       bottom: 16px;
-      background-image: url("/img/new/arrow-forward.svg");
+      background-image: url("../img/new/arrow-forward.svg");
       transition: .3s;
     }
 
@@ -223,19 +223,19 @@
   }
 
   .feature--photo .feature__decoration::before {
-    background-image: url('/img/new/intro-features-1.png');
+    background-image: url('../img/new/intro-features-1.png');
   }
 
   .feature--layout .feature__decoration::before {
-    background-image: url('/img/new/intro-features-2.png');
+    background-image: url('../img/new/intro-features-2.png');
   }
 
   .feature--tour .feature__decoration::before {
-    background-image: url('/img/new/intro-features-3.png');
+    background-image: url('../img/new/intro-features-3.png');
   }
 
   .feature--360 .feature__decoration::before {
-    background-image: url('/img/new/intro-features-4.png');
+    background-image: url('../img/new/intro-features-4.png');
   }
 
   .feature__decoration {
@@ -309,7 +309,7 @@
         display: block;
         transform: rotate(90deg) translateX(-50%);
         background-repeat: no-repeat;
-        background-image: url("/img/new/arrow-down.svg");
+        background-image: url("../img/new/arrow-down.svg");
       }
     }
   }

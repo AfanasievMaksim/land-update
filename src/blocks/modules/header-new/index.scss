@@ -143,7 +143,7 @@
       background-repeat: no-repeat;
       background-size: 24px;
       background-position: center;
-      background-image: url('/img/new/tel.svg');
+      background-image: url('../img/new/tel.svg');
 
       @include desktop {
         width: auto;
@@ -272,7 +272,7 @@
       top: 36px;
       right: 26px;
       background-repeat: no-repeat;
-      background-image: url(/img/close-icon.svg);
+      background-image: url(../img/close-icon.svg);
       background-size: contain;
       cursor: pointer;
     }

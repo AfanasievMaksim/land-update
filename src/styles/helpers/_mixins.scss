@@ -17,3 +17,7 @@
 @mixin custom-media($w) {
   @media (min-width: $w) { @content; }
 }
+
+@mixin custom-media-max($w) {
+  @media (max-width: $w) { @content; }
+}
