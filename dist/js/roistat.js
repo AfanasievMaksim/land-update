@@ -55,6 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
           { form_name: "filterBookingForm", form_id: "form-recall" },
           { form_name: "formDownloadPdfNew", form_id: "form-pdf-new" },
           { form_name: "formBookJorney", form_id: "form-book" },
+          { form_name: "formBookJorneyMiniModal", form_id: "form-mini-book" },
         ];
 
         formNames.forEach(function (row) {

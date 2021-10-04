@@ -58185,6 +58185,7 @@ apartmentItem.on('click', function () {
   var layout2d = jquery__WEBPACK_IMPORTED_MODULE_2___default()(this).data('layout-2d');
   var layout3d = jquery__WEBPACK_IMPORTED_MODULE_2___default()(this).data('layout-3d');
   renderApartmentsInfo(bed, bath, square, price);
+  showMiniModal('#mini-modal-help');
   chngeModalTitle(layoutsModalTabs.find('.layouts-section__tab.active').data('title'));
   jquery__WEBPACK_IMPORTED_MODULE_2___default()('.js-layout-2d').attr('data-src', layout2d);
   jquery__WEBPACK_IMPORTED_MODULE_2___default()('.js-layout-3d').attr('data-src', layout3d);
@@ -58199,7 +58200,6 @@ layoutsModalTab.on('click', function () {
   layoutsModalTabContent.removeClass('active');
   var activeTab = jquery__WEBPACK_IMPORTED_MODULE_2___default()("#".concat(jquery__WEBPACK_IMPORTED_MODULE_2___default()(this).data('tab')));
   var layoutSrc = activeTab.find('.js-layout-decor').attr('data-src');
-  console.log(jquery__WEBPACK_IMPORTED_MODULE_2___default()(this).data('tab') === 'tab-3d' && !isActivated3d);
 
   if (jquery__WEBPACK_IMPORTED_MODULE_2___default()(this).data('tab') === 'tab-3d') {
     if (!isActivated3d) {
@@ -58250,6 +58250,44 @@ window.addEventListener("message", function (e) {
 
 jquery__WEBPACK_IMPORTED_MODULE_2___default()('.js-open-tour').on('click', function () {
   jquery__WEBPACK_IMPORTED_MODULE_2___default()(this).closest('.tour-section__help').remove();
+}); // mini modal
+
+function showMiniModal(id) {
+  jquery__WEBPACK_IMPORTED_MODULE_2___default()('.mini-modal').removeClass('show');
+  jquery__WEBPACK_IMPORTED_MODULE_2___default()(id).addClass('show');
+}
+
+function closeMiniModal(target) {
+  if (jquery__WEBPACK_IMPORTED_MODULE_2___default()(target).closest('.mini-modal__content').length === 0) {
+    jquery__WEBPACK_IMPORTED_MODULE_2___default()('.mini-modal').removeClass('show');
+  }
+}
+
+jquery__WEBPACK_IMPORTED_MODULE_2___default()('[data-close-minimodal]').on('click', function () {
+  jquery__WEBPACK_IMPORTED_MODULE_2___default()('.mini-modal').removeClass('show');
+});
+jquery__WEBPACK_IMPORTED_MODULE_2___default()('[data-show-minimodal]').on('click', function () {
+  showMiniModal(jquery__WEBPACK_IMPORTED_MODULE_2___default()(this).data('show-minimodal'));
+});
+jquery__WEBPACK_IMPORTED_MODULE_2___default()('.mini-modal').on('click', function (e) {
+  closeMiniModal(e.target);
+});
+jquery__WEBPACK_IMPORTED_MODULE_2___default()("#form-mini-book").on("submit", function (e) {
+  e.preventDefault();
+  var formDataTel = jquery__WEBPACK_IMPORTED_MODULE_2___default()(this).find('input[name="phone"]');
+  var formDataName = jquery__WEBPACK_IMPORTED_MODULE_2___default()(this).find('input[name="name"]');
+
+  if (numberValidator(e.currentTarget)) {
+    formDataTel.val("");
+    formDataName.val("");
+    formDataTel.removeClass("valid");
+    formDataName.removeClass("valid");
+    setTimeout(function () {
+      showMiniModal('#mini-modal-thanks');
+    }, 0);
+  } else {
+    jquery__WEBPACK_IMPORTED_MODULE_2___default()(this).find(".form-validation-error").removeClass("hidden");
+  }
 });
 
 /***/ })

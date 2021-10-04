@@ -1497,6 +1497,7 @@ apartmentItem.on('click', function() {
   const layout2d = $(this).data('layout-2d')
   const layout3d = $(this).data('layout-3d')
   renderApartmentsInfo(bed, bath, square, price)
+  showMiniModal('#mini-modal-help')
 
   chngeModalTitle(layoutsModalTabs.find('.layouts-section__tab.active').data('title'))
 
@@ -1516,7 +1517,6 @@ layoutsModalTab.on('click', function() {
   const activeTab = $(`#${($(this).data('tab'))}`);
   const layoutSrc = activeTab.find('.js-layout-decor').attr('data-src');
 
-  console.log($(this).data('tab') === 'tab-3d' && !isActivated3d);
   if ($(this).data('tab') === 'tab-3d') {
     if (!isActivated3d) {
       activeTab.find('.js-layout-decor').attr('src', layoutSrc);
@@ -1572,4 +1572,46 @@ window.addEventListener("message", function(e) {
 //tour
 $('.js-open-tour').on('click', function() {
   $(this).closest('.tour-section__help').remove();
+});
+
+// mini modal
+function showMiniModal(id) {
+  $('.mini-modal').removeClass('show');
+  $(id).addClass('show')
+}
+
+function closeMiniModal(target) {
+  if ($(target).closest('.mini-modal__content').length === 0) {
+    $('.mini-modal').removeClass('show');
+  }
+}
+$('[data-close-minimodal]').on('click', function() {
+  $('.mini-modal').removeClass('show');
+});
+
+$('[data-show-minimodal]').on('click', function() {
+  showMiniModal($(this).data('show-minimodal'))
+})
+$('.mini-modal').on('click', function(e) {
+  closeMiniModal(e.target)
+});
+
+$("#form-mini-book").on("submit", function (e) {
+  e.preventDefault();
+
+  const formDataTel = $(this).find('input[name="phone"]');
+  const formDataName = $(this).find('input[name="name"]');
+
+  if (numberValidator(e.currentTarget)) {
+    formDataTel.val("");
+    formDataName.val("");
+    formDataTel.removeClass("valid");
+    formDataName.removeClass("valid");
+
+    setTimeout(() => {
+      showMiniModal('#mini-modal-thanks')
+    }, 0);
+  } else {
+    $(this).find(".form-validation-error").removeClass("hidden");
+  }
 });

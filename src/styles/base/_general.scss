@@ -151,6 +151,18 @@ input.section-filter__range {
     }
 }
 
+.btn-new--secondary {
+  background-color: #E3E4E8;
+
+  &:hover {
+    background-color: #BABBC5;
+  }
+
+  .btn-new__text {
+    color: #33353D;
+}
+}
+
 .flickity-prev-next-button {
     width: 49px;
     height: 49px;
