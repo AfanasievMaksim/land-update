@@ -1,0 +1,30 @@
+@import "header/index.scss";
+@import "main/index.scss";
+
+body {
+  font-family: 'Lexend', sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: #33353D;
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+  padding: 0;
+}
+
+img:not([src]):not([srcset]) {
+  visibility: hidden;
+}
+
+.container {
+  max-width: 1210px;
+  width: 100%;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin: 0 auto;
+}
