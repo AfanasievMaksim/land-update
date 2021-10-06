@@ -1479,6 +1479,44 @@ const chngeModalTitle = (key) => {
   }
 }
 
+// 3d
+const ifwin = document.querySelector('.VR-layout').contentWindow;
+let isInitDone = false;
+
+let cb3dlayouts = (e) => {
+  let d = e.data;
+  
+  if (d.type !== 'buttons') return;
+
+  if (d.action === 'init') {
+    isInitDone = true;
+
+    ifwin.postMessage({type: "buttons", action: "logo", fullsize: false}, "*");
+  }
+
+  if (d.action === 'visibility' && d.visible) {
+    $('.layouts-section__tab-content--3d').addClass('activated')
+  }
+
+  // console.log('work', d);
+}
+
+const init3dLayout = () => {
+  const timer = setInterval(() => {
+    console.log(123);
+    console.log(isInitDone);
+    if (isInitDone) {
+      clearInterval(timer);
+      return;
+    } else {
+      ifwin.postMessage({ type: 'buttons', action: 'init' }, '*');
+    }
+  }, 100)
+
+  window.removeEventListener("message", cb3dlayouts);
+  window.addEventListener("message", cb3dlayouts);
+}
+
 // layouts-section__tab-content
 const activateSecondScreen = () => {
   layoutsModal.addClass('second-screen')
@@ -1490,6 +1528,7 @@ layoutsModalHeaderBtn.on('click', function() {
 
 apartmentItem.on('click', function() {
   $(this).addClass('active').siblings().removeClass('active');
+  $('.layouts-section__tab-content--3d').removeClass('activated')
   const bed = $(this).data('bed')
   const bath = $(this).data('bath')
   const square = $(this).data('square')
@@ -1508,7 +1547,12 @@ apartmentItem.on('click', function() {
   activeLayoutItem.attr('src', layoutSrc);
 
   activateSecondScreen()
-  isActivated3d = false
+  if ($('.layouts-section__tab--3d').hasClass('active') && !isActivated3d) {
+    isInitDone = false
+    init3dLayout();
+  } else {
+    isActivated3d = false
+  }
 })
 
 layoutsModalTab.on('click', function() {
@@ -1519,6 +1563,7 @@ layoutsModalTab.on('click', function() {
 
   if ($(this).data('tab') === 'tab-3d') {
     if (!isActivated3d) {
+      init3dLayout();
       activeTab.find('.js-layout-decor').attr('src', layoutSrc);
     }
     isActivated3d = true
@@ -1532,42 +1577,6 @@ layoutsModalTab.on('click', function() {
 $('[data-title]').on('click', function() {
   chngeModalTitle($(this).data('title'))
 })
-
-// 3d
-const ifwin = document.querySelector('.VR-layout').contentWindow;
-let isInitDone = false;
-
-console.log(ifwin);
-
-// const timer = setInterval(() => {
-//   console.log(123);
-//   if (isInitDone) {
-//     clearInterval(timer);
-//     return;
-//   } else {
-//     ifwin.postMessage({ type: 'buttons', action: 'init' }, '*');
-//   }
-// }, 100)
-
-
-window.addEventListener("message", function(e) {
-  let d = e.data;
-
-  if (d.type !== 'buttons') return;
-
-  if (d.action === 'init') {
-    isInitDone = true;
-
-    ifwin.postMessage({ type: 'buttons', action: 'movemode', name: 'Walk' }, '*');
-  }
-
-  // if (d.type === 'movemode') {
-  //   ifwin.postMessage({ type: 'buttons', action: 'movemode', name: 'Orbit' }, '*');
-  // }
-
-  console.log('work', d);
-});
-
 
 //tour
 $('.js-open-tour').on('click', function() {
@@ -1596,7 +1605,7 @@ $('.mini-modal').on('click', function(e) {
   closeMiniModal(e.target)
 });
 
-$("#form-mini-book").on("submit", function (e) {
+$(".form-book-mini-modal").on("submit", function (e) {
   e.preventDefault();
 
   const formDataTel = $(this).find('input[name="phone"]');

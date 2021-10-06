@@ -1531,6 +1531,10 @@
       max-width: 1170px;
       margin-right: auto;
       margin-left: auto;
+
+      @include desktop {
+        padding-bottom: 85px;
+      }
     }
 
     .modal-title {
@@ -1570,57 +1574,25 @@
   }
 
   .tour-section-modal {
-    padding-top: 35px;
-    padding-bottom: 35px;
+    padding: 35px;
     background: #FFFFFF;
     box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.3);
     border-radius: 4px;
+    text-align: center;
   }
 
-  .tour-section-modal__title {
-    padding-right: 26px;
-    padding-left: 26px;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
-    color: #33353D;
-  }
-
-  .tour-section-modal__instructions {
-    padding: 25px 26px;
-    margin-top: 24px;
-    margin-bottom: 24px;
-    border-top: 1px solid #E3E4E8;
-    border-bottom: 1px solid #E3E4E8;
-  }
-
-  .tour-section-modal__instruction {
-    display: flex;
-    align-items: center;
-    max-width: 290px;
-    margin-right: auto;
-    margin-left: auto;
-
-    svg {
-      width: 24px;
-      flex-shrink: 0;
-      margin-right: 16px;
-    }
-  }
-
-  .tour-section-modal__instruction-desc {
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 20px;
-    color: #686C7D;
+  .tour-section-modal__icon {
+    margin-bottom: 16px;
   }
 
   .tour-section-modal__footnote {
-    padding-right: 26px;
-    padding-left: 26px;
+    width: 144px;
+    margin-right: auto;
+    margin-left: auto;
     font-weight: 300;
     font-size: 14px;
     line-height: 20px;
+    letter-spacing: 0.02em;
     color: #BABBC5;
   }
 
@@ -1717,10 +1689,15 @@
       width: 448px;
       margin-right: 26px;
     }
-  }
 
-  .layouts-section__header {
-    margin-bottom: 26px;
+    .layouts-section__header {
+      display: none;
+  
+      @include desktop {
+        display: block;
+        margin-bottom: 26px;
+      }
+    }
   }
 
   .layouts-section__descriptions {
@@ -2072,6 +2049,90 @@
     padding-bottom: 136px;
   }
 
+  .layouts-section__tab-content--3d {
+    line-height: 0;
+
+    &.activated {
+      .tab-btn,
+      .tab-logo,
+      .tab-help {
+        display: block;
+      }
+    }
+  }
+
+  .tab-btn,
+  .tab-logo,
+  .tab-help {
+    display: none;
+  }
+
+  .tab-btn {
+    position: absolute;
+    padding: 16px;
+    top: 25px;
+    left: 16px;
+    min-width: 180px;
+
+    @include custom-media(375px) {
+      top: 23px;
+      left: 23px;
+    }
+
+    @include desktop {
+      padding: 16px 32px;
+      top: 32px;
+      left: 32px;
+    }
+  }
+
+  .tab-logo {
+    position: absolute;
+    top: 25px;
+    right: 16px;
+    width: 56px;
+    height: 42px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url('../img/layouts/wh-logo-mob.svg');
+
+    @include custom-media(375px) {
+      width: 85px;
+      height: 64px;
+      top: 17px;
+      right: 24px;
+    }
+
+    @include desktop {
+      top: 42px;
+      right: 32px;
+      width: 170px;
+      height: 40px;
+      background-image: url('../img/layouts/wh-logo-desk.svg');
+    }
+  }
+
+  .tab-help {
+    position: absolute;
+    width: 162px;
+    bottom: 19px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+
+  .tab-help__icon {
+    margin-bottom: 8px;
+  }
+
+  .tab-help__text {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+    color: #BABBC5;
+  }
+
   .layouts-section__tab-actions {
     position: absolute;
     bottom: 12px;
@@ -2206,54 +2267,23 @@
   }
 
   .mini-modal__content--help {
-    padding-top: 35px;
-    padding-bottom: 35px;
+    max-width: 302px;
+    padding: 35px;
+    text-align: center;
   }
 
-  .mini-modal__title {
-    padding-right: 26px;
-    padding-left: 26px;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
-    color: #33353D;
-  }
-
-  .mini-modal__instructions {
-    padding: 25px 26px;
-    margin-top: 24px;
-    margin-bottom: 24px;
-    border-top: 1px solid #E3E4E8;
-    border-bottom: 1px solid #E3E4E8;
-  }
-
-  .mini-modal__instruction {
-    display: flex;
-    align-items: center;
-    max-width: 290px;
-    margin-right: auto;
-    margin-left: auto;
-
-    svg {
-      width: 24px;
-      flex-shrink: 0;
-      margin-right: 16px;
-    }
-  }
-
-  .mini-modal__instruction-desc {
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 20px;
-    color: #686C7D;
+  .mini-modal__icon {
+    margin-bottom: 16px;
   }
 
   .mini-modal__footnote {
-    padding-right: 26px;
-    padding-left: 26px;
+    width: 144px;
+    margin-right: auto;
+    margin-left: auto;
     font-weight: 300;
     font-size: 14px;
     line-height: 20px;
+    letter-spacing: 0.02em;
     color: #BABBC5;
   }
 

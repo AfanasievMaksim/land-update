@@ -1834,7 +1834,6 @@
                 <div data-tab="tab-2d" data-title="2d"  class="layouts-section__tab active">2D</div>
                 <div data-tab="tab-3d" data-title="3d" class="layouts-section__tab layouts-section__tab--3d">3D</div>
                 <div data-tab="tab-floor" data-title="floor" class="layouts-section__tab">FLOOR PLAN</div>
-                <div data-tab="tab-photo" data-title="photo" class="layouts-section__tab">PHOTO</div>
               </div>
               <div class="layouts-section__header-apartments">
                 <div class="layouts-section__header-apartment layouts-section__header-apartment--bed js-layout-desc-bed">
@@ -1891,6 +1890,109 @@
   </div>
 </div>
                 <div id="tab-2d" class="layouts-section__tab-content layouts-section__tab-content--2d active">
+                  <div class="mini-modal modal-custom--small fade" id="mini-modal-book-consultation">
+  <div class="mini-modal__content">
+    <div class="mini-modal-header">
+      <img data-src="img/new/arrow-back.svg" data-close-minimodal class="mini-modal-action__icon lazy">
+      <div class="mini-modal-close">
+        <button type="button" class="close mini-modal-close__icon" data-close-minimodal aria-label="Close"></button>
+      </div>
+    </div>
+    <div class="mini-modal-body">
+      <div class="mini-modal-broker">
+        <img src="img/new/tina.png" alt="" width="150" height="150" class="lazy mini-modal-broker__img">
+        <p class="mini-modal-broker__title">
+          TINA TRUONG
+        </p>
+        <p class="mini-modal-broker__text">
+          You have a questions?
+        </p>
+      </div>
+      <form id="form-mini-book-consultation" action="" class="modal-form form-new-design form-book-mini-modal">
+        <input
+          type="text"
+          name="name"
+          placeholder="Tên khách hàng"
+          class="form-input new"
+        />
+        <div class="form-validation">
+          <input
+            type="text"
+            name="phone"
+            placeholder="Số điện thoại"
+            class="form-input new"
+          />
+          <div class="form-validation-error hidden">Please use correct phone number</div>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn-new modal__btn">
+            <span class="btn__text">
+              Gửi
+            </span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+                  <div class="mini-modal modal-custom--small fade" id="mini-modal-book-apartment">
+  <div class="mini-modal__content">
+    <div class="mini-modal-header">
+      <img data-src="img/new/arrow-back.svg" data-close-minimodal class="mini-modal-action__icon lazy">
+      <div class="mini-modal-close">
+        <button type="button" class="close mini-modal-close__icon" data-close-minimodal aria-label="Close"></button>
+      </div>
+    </div>
+    <div class="mini-modal-body">
+      <div class="mini-modal-broker">
+        <img src="img/new/tina.png" alt="" width="150" height="150" class="lazy mini-modal-broker__img">
+        <p class="mini-modal-broker__title">
+          TINA TRUONG
+        </p>
+        <p class="mini-modal-broker__text">
+          Want book apartment?
+        </p>
+      </div>
+      <form id="form-mini-book-apartment" action="" class="modal-form form-new-design form-book-mini-modal">
+        <input
+          type="text"
+          name="name"
+          placeholder="Tên khách hàng"
+          class="form-input new"
+        />
+        <div class="form-validation">
+          <input
+            type="text"
+            name="phone"
+            placeholder="Số điện thoại"
+            class="form-input new"
+          />
+          <div class="form-validation-error hidden">Please use correct phone number</div>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn-new modal__btn">
+            <span class="btn__text">
+              Gửi
+            </span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+                  <img data-src="img/layouts/rooms/room-2.png" class="lazy js-layout-2d js-layout-decor" alt="">
+                  <div class="layouts-section__tab-actions">
+                    <button class="btn-new btn-new--secondary" data-show-minimodal="#mini-modal-book-consultation">
+                      <span class="btn-new__text">
+                        Get a consultation
+                    </span></button>
+                    <button class="btn-new" data-show-minimodal="#mini-modal-book-apartment">
+                      <span class="btn-new__text">
+                        Book an apartment
+                    </span></button>
+                  </div>
+                </div>
+                <div id="tab-3d" class="layouts-section__tab-content layouts-section__tab-content--3d">
                   <div class="mini-modal modal-custom--small fade" id="mini-modal-book-journey">
   <div class="mini-modal__content">
     <div class="mini-modal-header">
@@ -1909,7 +2011,7 @@
           Đặt lịch xem 3D Sales Gallery với Tina
         </p>
       </div>
-      <form id="form-mini-book" action="" class="modal-form form-new-design">
+      <form id="form-mini-book-jorney" action="" class="modal-form form-new-design form-book-mini-modal">
         <input
           type="text"
           name="name"
@@ -1974,41 +2076,9 @@
     </div>
   </div>
 </div>
-                  <img data-src="img/layouts/rooms/room-2.png" class="lazy js-layout-2d js-layout-decor" alt="">
-                  <div class="layouts-section__tab-actions">
-                    <button class="btn-new btn-new--secondary" data-show-minimodal="#mini-modal-journey-3d">
-                      <span class="btn-new__text">
-                        Get a consultation
-                    </span></button>
-                    <button class="btn-new" data-close-minimodal>
-                      <span class="btn-new__text">
-                        Book an apartment
-                    </span></button>
-                  </div>
-                </div>
-                <div id="tab-3d" class="layouts-section__tab-content">
                   <div class="mini-modal fade show" id="mini-modal-help">
   <div class="mini-modal__content mini-modal__content--help">
-    <div class="mini-modal__title">
-      ICONS DESCRIPTION
-    </div>
-    <div class="mini-modal__instructions">
-      <div class="mini-modal__instruction">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M20 2H22V8H20V2Z" fill="#A52662"/>
-          <path d="M22 2V4L16 4L16 2L22 2Z" fill="#A52662"/>
-          <path d="M4 22H2L2 16L4 16L4 22Z" fill="#A52662"/>
-          <path d="M2 22L2 20L8 20L8 22L2 22Z" fill="#A52662"/>
-          <path d="M2 4L2 2L8 2V4L2 4Z" fill="#A52662"/>
-          <path d="M2 2H4V8H2L2 2Z" fill="#A52662"/>
-          <path d="M22 20L22 22L16 22L16 20L22 20Z" fill="#A52662"/>
-          <path d="M22 22L20 22L20 16L22 16L22 22Z" fill="#A52662"/>
-          </svg>
-          <p class="mini-modal__instruction-desc">
-            Left click to open fullscreen
-          </p>
-      </div>
-    </div>
+    <img data-src="img/layouts/360-degrees.svg" width="40" height="40" class="lazy mini-modal__icon" alt="">
     <p class="mini-modal__footnote">Please click “Start” to launch Opera Tour</p>
     <div class="mini-modal__action">
       <button class="btn-new" data-close-minimodal>
@@ -2018,10 +2088,23 @@
     </div>
   </div>
 </div>
+                  <button class="btn-new tab-btn" data-show-minimodal="#mini-modal-journey-3d">
+                    <span class="btn-new__text">
+                      Book 3D JOURNEY
+                  </span></button>
+                  <a href="https://www.whitemark.io/" class="tab-logo" target="_blank"></a>
+                  <div class="tab-help">
+                    <img data-src="../../../img/layouts/360-degrees.svg" class="lazy tab-help__icon" alt="">
+                    <p class="tab-help__text">
+                      Click on 3D model
+                      and hold to rotate 360°
+                    </p>
+                  </div>
                   <iframe class="lazy VR-layout js-layout-3d js-layout-decor" width="100%" height="100%" data-src="https://vn-maps3d.vrnet.io/view5.16a/?model=vn/whitemark/opera/a03_01copy&buttons=api" frameborder="0"></iframe>
                 </div>
-                <div id="tab-floor" class="layouts-section__tab-content">floor</div>
-                <div id="tab-photo" class="layouts-section__tab-content">photo</div>
+                <div id="tab-floor" class="layouts-section__tab-content">
+                  <img data-src="img/layouts/rooms/room-2.png" class="lazy js-layout-2d js-layout-decor" alt="">
+                </div>
               </div>
             </div>
           </div>
@@ -2224,26 +2307,7 @@
         <div class="tour-section">
           <div class="tour-section__help">
             <div class="tour-section-modal">
-              <div class="tour-section-modal__title">
-                ICONS DESCRIPTION
-              </div>
-              <div class="tour-section-modal__instructions">
-                <div class="tour-section-modal__instruction">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M20 2H22V8H20V2Z" fill="#A52662"/>
-                    <path d="M22 2V4L16 4L16 2L22 2Z" fill="#A52662"/>
-                    <path d="M4 22H2L2 16L4 16L4 22Z" fill="#A52662"/>
-                    <path d="M2 22L2 20L8 20L8 22L2 22Z" fill="#A52662"/>
-                    <path d="M2 4L2 2L8 2V4L2 4Z" fill="#A52662"/>
-                    <path d="M2 2H4V8H2L2 2Z" fill="#A52662"/>
-                    <path d="M22 20L22 22L16 22L16 20L22 20Z" fill="#A52662"/>
-                    <path d="M22 22L20 22L20 16L22 16L22 22Z" fill="#A52662"/>
-                    </svg>
-                    <p class="tour-section-modal__instruction-desc">
-                      Left click to open fullscreen
-                    </p>
-                </div>
-              </div>
+              <img data-src="img/layouts/360-degrees.svg" width="40" height="40" class="lazy tour-section-modal__icon" alt="">
               <p class="tour-section-modal__footnote">Please click “Start” to launch Opera Tour</p>
               <div class="tour-section-modal__action">
                 <button class="btn-new js-open-tour">

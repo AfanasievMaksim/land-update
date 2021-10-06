@@ -157,6 +157,10 @@
     line-height: 20px;
     color: #BABBC5;
     flex-shrink: 0;
+
+    @include desktop {
+      margin-bottom: 0;
+    }
   }
 
   .footer-col__desc {
@@ -168,7 +172,7 @@
 
   .developer {
     @include desktop {
-      margin-top: -8px;
+      margin-top: -14px;
     }
   }
 }
