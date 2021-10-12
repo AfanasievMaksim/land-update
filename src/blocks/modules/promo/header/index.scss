@@ -1,35 +1,55 @@
 .header {
   padding-top: 40px;
   padding-bottom: 48px;
+  text-align: center;
+
+  @include desktop {
+    padding-top: 72px;
+    padding-bottom: 64px;
+  }
 
   .logo {
-    margin-bottom: 40px;
+    margin-bottom: 24px;
+  }
+
+  .section-row {
+    @include desktop {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
 
   .main-title {
     position: relative;
-    padding-bottom: 13px;
-    margin-bottom: 12px;
+    margin-bottom: 24px;
     font-family: 'STIX Two Text', serif;
     font-weight: 600;
     font-size: 36px;
     line-height: 38px;
 
-    &::before {
-      content: "";
-      position: absolute;
-      height: 1px;
-      width: 50px;
-      bottom: 0;
-      left: 0;
-      background: #E3E4E8;
+    @include desktop {
+      padding-right: 17px;
+      margin-right: 16px;
+      margin-bottom: 0;
+
+      &::before {
+        content: "";
+        position: absolute;
+        height: 20px;
+        width: 1px;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        background: #E3E4E8;
+      }
     }
   }
 
   .main-subtitle {
     font-weight: 300;
-    font-size: 16px;
-    line-height: 28px;
+    font-size: 14px;
+    line-height: 20px;
     color: #686C7D;
   }
 }

@@ -1,0 +1,61 @@
+.who-builds {
+  .section-title {
+    margin-bottom: 36px;
+
+    @include desktop {
+      margin-bottom: 52px;
+    }
+  }
+
+  .tabs {
+    margin-bottom: 36px;
+
+    @include desktop {
+      display: flex;
+      margin-bottom: 52px;
+    }
+  }
+
+  .tab {
+    margin-bottom: 16px;
+
+    @include desktop {
+      margin-bottom: 0;
+      margin-right: 32px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .section-row {
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .section-col {
+    @include tablet {
+      width: calc(50% - 40px);
+    }
+  }
+
+  .section-text {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.02em;
+    color: #686C7D;
+    margin-bottom: 36px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @include tablet {
+      margin-bottom: 0;
+    }
+  }
+}

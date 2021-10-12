@@ -52,6 +52,7 @@
 
   .section-col--content {
     margin-top: 40px;
+    position: relative;
 
     @include desktop {
       margin-top: 0;
@@ -67,6 +68,10 @@
 
     @include desktop {
       height: 528px;
+    }
+
+    &.hide {
+      display: none;
     }
   }
 
@@ -86,6 +91,10 @@
 
     @include desktop {
       padding: 44px 32px;
+    }
+
+    &.hide {
+      display: none;
     }
   }
 
@@ -173,6 +182,108 @@
   .developer {
     @include desktop {
       margin-top: -14px;
+    }
+  }
+
+  .info-2d {
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .info-2d-items {
+    min-width: 120px;
+    padding-left: 17px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 50px;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #E3E4E8;
+    }
+  }
+
+  .info-2d-item {
+    font-size: 16px;
+    line-height: 28px;
+    color: #686C7D;
+
+    .colored {
+      display: inline-block;
+      min-width: 28px;
+      font-weight: 300;
+      color: #BABBC5;
+    }
+  }
+
+  .toggle-views {
+    display: flex;
+    margin-bottom: 24px;
+    @include desktop {
+      position: absolute;
+      top: 32px;
+      right: 32px;
+      z-index: 99;
+    }
+
+    &.hide {
+      display: none;
+    }
+  }
+
+  .toggle-views__item {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    line-height: 28px;
+    color: #33353D;
+    background: #FFFFFF;
+    border-radius: 50%;
+    margin-right: 16px;
+    cursor: pointer;
+    border: 1px solid #E3E4E8;
+
+    &.active {
+      color: #EC133A;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .floor-plans {
+    padding: 20px;
+    text-align: center;
+    background: #F7F7F8;
+
+    &.hide {
+      display: none;
+    }
+
+    @include desktop {
+      padding: 48px;
+    }
+  }
+
+  .floor-plan {
+    display: none;
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    &.active {
+      display: block;
     }
   }
 }

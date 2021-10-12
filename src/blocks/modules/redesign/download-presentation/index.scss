@@ -1,0 +1,98 @@
+.download-presentation {
+  background: #12A3EC;
+  overflow: hidden;
+
+  @include tablet {
+    padding-top: 116px;
+    padding-bottom: 116px;
+  }
+
+  @include desktop {
+    padding-top: 116px;
+    padding-bottom: 116px;
+  }
+
+  .section-row {
+    position: relative;
+    text-align: center;
+
+    @include tablet {
+      display: flex;
+      text-align: left;
+    }
+  }
+
+  .section-col--intro {
+    @include tablet {
+      width: 344px;
+    }
+  }
+
+  .section-title {
+    color: #fff;
+
+    padding-bottom: 17px;
+    margin-bottom: 16px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 1px;
+      width: 60px;
+      background: #fff;
+      left: calc(50% - 30px);
+      bottom: 0;
+    }
+  }
+
+  .section-text {
+    font-size: 16px;
+    line-height: 26px;
+    color: #fff;
+
+    @include tablet {
+      margin-bottom: 32px;
+    }
+  }
+
+  .section-actions {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include tablet {
+      position: static;
+      left: 0;
+      transform: translateX(0);
+    }
+  }
+
+  .section-col--img {
+    padding-top: 30px;
+    padding-bottom: 116px;
+
+    @include tablet {
+      padding-top: 0;
+      padding-bottom: 0;
+      width: calc(100% - 344px);
+      position: relative;
+    }
+  }
+
+  .section-img {
+    width: 262px;
+    height: auto;
+    transform: rotate(-15deg);
+
+    @include tablet {
+      width: 810px;
+      max-width: none;
+      position: absolute;
+      top: -56px;
+      left: 64px;
+    }
+  }
+}

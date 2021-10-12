@@ -1,6 +1,17 @@
 @import "modules/header-new/index";
 @import "modules/cta/index";
 @import "modules/intro-new/index";
+
+@import "modules/redesign/common/index.scss";
+@import "modules/redesign/general-description/index.scss";
+@import "modules/redesign/about-top/index.scss";
+@import "modules/redesign/advantages/index.scss";
+@import "modules/redesign/photos/index.scss";
+@import "modules/redesign/layouts/index.scss";
+@import "modules/redesign/about-bottom/index.scss";
+@import "modules/redesign/download-presentation/index.scss";
+@import "modules/redesign/who-builds/index.scss";
+
 @import "modules/slider/index";
 @import "modules/reviews/index";
 @import "modules/filter/index";

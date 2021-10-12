@@ -1,0 +1,50 @@
+[data-redesign='true'] {
+  font-family: 'Lexend', sans-serif;
+  padding-top: 72px;
+  padding-bottom: 72px;
+
+  @include desktop {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+
+  &.colored {
+    background: #F7F7F8;
+  }
+
+  .container {
+    max-width: 1210px;
+    position: relative;
+  }
+
+  .section-title {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 38px;
+    font-family: 'STIX Two Text', serif;
+    color: #2B2B31;
+    text-align: inherit;
+
+    @include desktop {
+      font-size: 64px;
+      line-height: 72px;
+    }
+  }
+
+  .tab {
+    &.active {
+      .tab__title {
+        color: #33353D;
+        border-bottom: 1px solid #33353D;
+      }
+    }
+  }
+
+  .tab__title {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #BABBC5;
+  }
+}

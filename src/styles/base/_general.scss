@@ -160,7 +160,19 @@ input.section-filter__range {
 
   .btn-new__text {
     color: #33353D;
+  }
 }
+
+.btn-new--black {
+  background-color: #33353D;
+
+  &:hover {
+    background-color: #BABBC5;
+  }
+
+  .btn-new__text {
+    color: #FFFFFF;
+  }
 }
 
 .flickity-prev-next-button {

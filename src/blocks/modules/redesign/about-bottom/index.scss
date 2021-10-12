@@ -1,0 +1,29 @@
+.about-bottom {
+  .container {
+    max-width: 610px;
+  }
+
+  .section-title {
+    padding-bottom: 17px;
+    margin-bottom: 16px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 1px;
+      width: 60px;
+      background: #E3E4E8;
+      left: 0;
+      bottom: 0;
+    }
+  }
+
+  .section-text {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.02em;
+    color: #686C7D;
+  }
+}
