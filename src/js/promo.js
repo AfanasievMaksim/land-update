@@ -10,6 +10,17 @@ let currentApartment = 'ext';
 $('.section-col--actions .btn').on('click', function() {
   const iframeId = $(this).data('iframe');
 
+  const fa = $(this).data('fa');
+  const ua = $(this).data('ua');
+
+  if (fa && ua) {
+    $('.info-2d').removeClass('hide')
+    $('.js-fa').text(fa)
+    $('.js-ua').text(ua)
+  } else {
+    $('.info-2d').addClass('hide')
+  }
+
   if (iframeId === 'ext') {
     $('.iframes').removeClass('hide');
     $('.instructions').removeClass('hide');

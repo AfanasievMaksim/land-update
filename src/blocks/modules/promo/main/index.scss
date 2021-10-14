@@ -5,12 +5,14 @@
     @include desktop {
       display: flex;
       align-items: flex-start;
+      flex-wrap: wrap;
     }
   }
 
   .section-col--actions {
     margin: -4px;
     @include desktop {
+      // padding-top: 44px;
       margin: 0;
       width: 200px;
     }
@@ -186,32 +188,47 @@
   }
 
   .info-2d {
-    margin-bottom: 32px;
-    display: flex;
-    justify-content: center;
+    margin-bottom: 16px;
+
+    &.hide {
+      display: none;
+    }
+
+    @include desktop {
+      padding-left: 240px;
+      width: 100%;
+      order: -1;
+    }
   }
 
   .info-2d-items {
-    min-width: 120px;
-    padding-left: 17px;
+    display: flex;
+  }
+
+  .info-2d-item {
+    padding-right: 17px;
+    margin-right: 16px;
+    font-size: 16px;
+    line-height: 28px;
+    color: #686C7D;
     position: relative;
 
     &::before {
       content: "";
       position: absolute;
       width: 1px;
-      height: 50px;
-      left: 0;
+      height: 20px;
+      right: 0;
       top: 50%;
       transform: translateY(-50%);
       background: #E3E4E8;
     }
-  }
 
-  .info-2d-item {
-    font-size: 16px;
-    line-height: 28px;
-    color: #686C7D;
+    &:last-child {
+      &::before {
+        display: none;
+      }
+    }
 
     .colored {
       display: inline-block;
@@ -249,10 +266,14 @@
     border-radius: 50%;
     margin-right: 16px;
     cursor: pointer;
-    border: 1px solid #E3E4E8;
+
+    &[data-view="3d"]:not(.active) {
+      color: #EC133A;
+    }
 
     &.active {
-      color: #EC133A;
+      color: #fff;
+      background: #12A3EC;
     }
 
     &:last-child {
@@ -279,6 +300,8 @@
 
     img {
       max-width: 100%;
+      width: auto;
+      max-height: 480px;
       height: auto;
     }
 
