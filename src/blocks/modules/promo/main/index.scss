@@ -53,7 +53,7 @@
   }
 
   .section-col--content {
-    margin-top: 40px;
+    margin-top: 24px;
     position: relative;
 
     @include desktop {
@@ -188,6 +188,7 @@
   }
 
   .info-2d {
+    margin-top: 24px;
     margin-bottom: 16px;
 
     &.hide {
@@ -195,6 +196,7 @@
     }
 
     @include desktop {
+      margin-top: 0;
       padding-left: 240px;
       width: 100%;
       order: -1;
@@ -266,6 +268,7 @@
     border-radius: 50%;
     margin-right: 16px;
     cursor: pointer;
+    border: 1px solid #E3E4E8;
 
     &[data-view="3d"]:not(.active) {
       color: #EC133A;
@@ -274,6 +277,7 @@
     &.active {
       color: #fff;
       background: #12A3EC;
+      border-color: #12A3EC;
     }
 
     &:last-child {
@@ -301,8 +305,13 @@
     img {
       max-width: 100%;
       width: auto;
+      min-height: 378px;
       max-height: 480px;
       height: auto;
+
+      @include desktop {
+        min-height: 480px;
+      }
     }
 
     &.active {
