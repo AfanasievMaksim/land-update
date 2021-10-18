@@ -1503,8 +1503,6 @@ let cb3dlayouts = (e) => {
 
 const init3dLayout = () => {
   const timer = setInterval(() => {
-    console.log(123);
-    console.log(isInitDone);
     if (isInitDone) {
       clearInterval(timer);
       return;
@@ -1562,7 +1560,7 @@ layoutsModalTab.on('click', function() {
   const layoutSrc = activeTab.find('.js-layout-decor').attr('data-src');
 
   if ($(this).data('tab') === 'tab-3d') {
-    if (!isActivated3d) {
+    if (!isActivated3d && activeTab.find('.js-layout-decor').attr('src') != layoutSrc) {
       init3dLayout();
       activeTab.find('.js-layout-decor').attr('src', layoutSrc);
     }
