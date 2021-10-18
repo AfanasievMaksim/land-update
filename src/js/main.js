@@ -346,7 +346,7 @@ const renderApartmentsInfo = (bed, bath, square, price) => {
 
 const chngeModalTitle = (key) => {
   const data = {
-    "intro": "Layouts of Opera Residence",
+    "intro": "Các layout có sẵn của dự án",
     "2d": "2D Layout",
     "3d": "<span style='color: #EC133A;'>3D</span> Layout",
     "floor": "floor",
