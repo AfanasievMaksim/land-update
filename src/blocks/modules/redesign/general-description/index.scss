@@ -43,6 +43,15 @@
 
   .section-col {
     margin-bottom: -16px;
+
+    &:first-child {
+      margin-bottom: 0;
+
+      @include desktop {
+        margin-bottom: -16px;
+      }
+    }
+
     @include tablet {
       width: calc(50% - 40px);
     }
@@ -54,10 +63,6 @@
 
   .info-item {
     margin-bottom: 16px;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
   }
 
   .info-item__title {

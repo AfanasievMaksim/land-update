@@ -1,0 +1,153 @@
+.photos {
+  .section-title {
+    margin-bottom: 40px;
+
+    @include desktop {
+      margin-bottom: 52px;
+    }
+  }
+
+  .tabs {
+    columns: 2;
+    column-gap: 32px;
+    margin-bottom: 44px;
+
+    @include tablet {
+      margin-bottom: 36px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  .tab {
+    margin-bottom: 16px;
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  .section-subtitle {
+    margin-bottom: 40px;
+    max-width: 264px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 26px;
+    color: #686C7D;
+    text-align: left;
+
+    @include tablet {
+      max-width: 432px;
+      margin-bottom: 48px;
+    }
+  }
+
+  .section-row {
+    @include tablet {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: row-reverse;
+    }
+  }
+
+  .section-col--photos {
+    @include tablet {
+      width: calc(100% - 303px);
+      padding-left: 20px;
+    }
+
+    @include desktop {
+      padding-left: 100px;
+    }
+  }
+
+  .photos {
+    margin: -8px;
+    font-size: 0;
+    line-height: 0;
+
+    @include tablet {
+      display: flex;
+      flex-wrap: wrap;
+      margin: -4px;
+    }
+  }
+
+  .photo {
+    margin: 8px;
+
+    @include tablet {
+      margin: 4px;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .photo--half {
+    @include tablet {
+      width: calc(50% - 8px);
+    }
+  }
+
+  .section-col--intro {
+    margin-top: 16px;
+    @include tablet {
+      margin-top: 0;
+      width: 303px;
+    }
+  }
+
+  .cta {
+    margin-bottom: 8px;
+    padding: 28px 34px 22px;
+    background: #F7F7F8;
+    border-radius: 4px;
+    text-align: center;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .cta--pdf {
+    .cta-photo {
+      height: 185px;
+      padding-top: 15px;
+    }
+  
+    .cta-photo__img {
+      transform: rotate(-15deg);
+    }
+  }
+
+  .cta__title {
+    margin-top: 12px;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #33353D;
+  }
+
+  .cta__desk {
+    margin-top: 16px;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #686C7D;
+    max-width: 183px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .cta__actions {
+    margin-top: 16px;
+    .btn-new {
+      min-width: 232px;
+      justify-content: center;
+    }
+  }
+}
