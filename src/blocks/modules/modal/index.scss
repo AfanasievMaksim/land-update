@@ -2088,19 +2088,20 @@
 
   .tab-logo {
     position: absolute;
-    top: 25px;
-    right: 16px;
-    width: 56px;
-    height: 42px;
+    top: 95px;
+    right: calc(50% - 136px / 2);
+    width: 135px;
+    height: 32px;
     background-repeat: no-repeat;
     background-size: contain;
-    background-image: url('../img/layouts/wh-logo-mob.svg');
+    background-image: url('../img/layouts/wh-logo-desk.svg');
 
-    @include custom-media(375px) {
+    @include custom-media(440px) {
       width: 85px;
       height: 64px;
       top: 17px;
       right: 24px;
+      background-image: url('../img/layouts/wh-logo-mob.svg');
     }
 
     @include desktop {
@@ -2240,7 +2241,7 @@
     position: absolute;
     padding: 8px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     top: 0;
     right: 0;
@@ -2250,6 +2251,11 @@
     backdrop-filter: blur(50px);
     border-radius: 4px;
     z-index: 9999;
+    overflow-y: scroll;
+
+    @include desktop {
+      align-items: center;
+    }
 
     &:not(.show) {
       display: none;
