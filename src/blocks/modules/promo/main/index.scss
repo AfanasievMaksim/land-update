@@ -301,6 +301,7 @@
 
   .floor-plan {
     display: none;
+    position: relative;
 
     img {
       max-width: 100%;
@@ -317,5 +318,45 @@
     &.active {
       display: block;
     }
+  }
+
+  .floor-plan__info {
+    background: #FFFFFF;
+    padding: 28px 20px;
+    margin-bottom: 32px;
+
+    @include desktop {
+      position: absolute;
+      left: -16px;
+      top: -16px;
+      width: 216px;
+    }
+  }
+
+  .floor-plan__info-header {
+    margin-bottom: 16px;
+
+    @include desktop {
+      text-align: left;
+    }
+  }
+
+  .floor-plan__info-title {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+    color: #686C7D;
+    margin-bottom: 0;
+    margin-top: 0;
+
+    &.colored {
+      color: #EC133A;
+    }
+  }
+
+  .floor-plan__info-image {
+    max-width: 100%;
+    height: auto;
+    min-height: auto !important;
   }
 }
