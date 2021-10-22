@@ -706,18 +706,19 @@
     padding: 24px 15px 0;
 
     @include desktop {
-      padding: 56px 53px 0;
+      padding: 24px 53px 0;
+      min-height: 100vh;
+    }
+
+    @include custom-media(1480px) {
+      min-height: auto;
     }
   }
 
   .modal-header {
     padding: 0;
     border: none;
-    margin-bottom: 36px;
-
-    @include desktop {
-      margin-bottom: 56px;
-    }
+    margin-bottom: 30px;
   }
 
   .modal-body {
@@ -1071,7 +1072,7 @@
     margin-left: auto;
 
     @include desktop {
-      padding-bottom: 85px;
+      padding-bottom: 38px;
     }
   }
 
@@ -1082,7 +1083,7 @@
       justify-content: space-between;
     }
     .modal-title {
-      margin-bottom: 16px;
+      margin-bottom: 12px;
 
       @include desktop {
         width: auto;
@@ -1352,7 +1353,12 @@
     }
 
     @include custom-media(1200px) {
-      min-height: 664px;
+      height: 600px;
+      overflow: hidden;
+    }
+
+    @include custom-media(1480px) {
+      height: 664px;
     }
 
     @include desktop {
@@ -1533,7 +1539,7 @@
       margin-left: auto;
 
       @include desktop {
-        padding-bottom: 85px;
+        padding-bottom: 20px;
       }
     }
 
@@ -1600,6 +1606,10 @@
     width: 100%;
 
     @include desktop {
+      height: 600px;
+    }
+
+    @include custom-media(1480px) {
       height: 664px;
     }
   }

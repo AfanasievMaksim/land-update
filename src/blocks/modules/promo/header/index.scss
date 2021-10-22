@@ -17,6 +17,9 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      position: relative;
+      padding-right: 120px;
+      padding-left: 120px;
     }
   }
 
@@ -51,5 +54,113 @@
     font-size: 14px;
     line-height: 20px;
     color: #686C7D;
+  }
+
+  .lang-switcher {
+    position: relative;
+    display: inline-block;
+    z-index: 111;
+    margin-top: 24px;
+
+    @include desktop {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      margin-top: 0;
+    }
+
+    &.is-open {
+      .lang-switcher-head .lang-switcher-item {
+        background-color: #12A3EC;
+        border-color: #12A3EC;
+  
+        .lang-switcher-item__title {
+          color: #fff;
+        }
+  
+        svg {
+          transform: rotate(180deg);
+          path {
+            stroke: #fff;
+            
+          }
+        }
+      }
+
+      .lang-switcher-body {
+        opacity: 1;
+        pointer-events: auto;
+      }
+    }
+  }
+
+  .lang-switcher-head {
+    .lang-switcher-item {
+      padding-right: 38px;
+      position: relative;
+
+      svg {
+        position: absolute;
+        right: 8px;
+        top: 8px;
+      }
+    }
+  }
+
+  .lang-switcher-body {
+    position: absolute;
+    transform: translateY(100%);
+    bottom: -8px;
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s;
+  }
+
+  .lang-switcher-item {
+    min-width: 112px;
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border: 1px solid #E3E4E8;
+    background-color: transparent;
+    transition: .3s;
+    cursor: pointer;
+    text-decoration: none;
+
+    &:hover {
+      background-color: #E3E4E8;
+    }
+
+    &:active {
+      background-color: #12A3EC;
+      border-color: #12A3EC;
+
+      .lang-switcher-item__title {
+        color: #fff;
+      }
+
+      svg {
+        transform: rotate(180deg);
+        path {
+          stroke: #fff;
+          
+        }
+      }
+    }
+  }
+
+  .lang-switcher-item__img {
+    flex-shrink: 0;
+    margin-right: 4px;
+  }
+
+  .lang-switcher-item__title {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0.02em;
+    color: #686C7D;
+    margin: 0;
   }
 }

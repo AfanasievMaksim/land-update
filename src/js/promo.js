@@ -48,3 +48,22 @@ $('.js-toggle-views .toggle-views__item').on('click', function() {
     $('.floor-plans').addClass('hide');
   }
 });
+
+$(document).on('click', function(e) {
+  if ($(e.target).closest('.lang-switcher-head').length === 0) {
+    $('.lang-switcher').removeClass('is-open');
+  }
+  console.log(e.target);
+})
+
+$('.lang-switcher .lang-switcher-head').on('click', function() {
+  $('.lang-switcher').toggleClass('is-open');
+});
+
+$('.lang-switcher .lang-switcher-body').on('click', function() {
+  const langImg = $(this).find('img').attr('src');
+  const selectedLang = $(this).find('p').text();
+
+  $('.lang-switcher .lang-switcher-head').find('img').attr('src', langImg);
+  $('.lang-switcher .lang-switcher-head').find('p').text(selectedLang);
+});
