@@ -1,0 +1,70 @@
+.construction-monitoring {
+  .section-title {
+    margin-bottom: 32px;
+
+    @include desktop {
+      margin-bottom: 48px;
+    }
+  }
+
+  .section-info {
+    margin-bottom: 36px;
+    display: flex;
+
+    @include desktop {
+      margin-bottom: 52px;
+    }
+  }
+
+  .section-info-col {
+    position: relative;
+
+    &:first-child {
+      padding-right: 17px;
+      margin-right: 16px;
+
+      &::before {
+        content: "";
+        width: 1px;
+        height: 30px;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        background: #E3E4E8;
+      }
+    }
+  }
+
+  .section-info-title {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0.02em;
+    color: #BABBC5;
+  }
+
+  .section-info-desc {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0.02em;
+    color: #686C7D;
+  }
+
+  .tabs {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 36px;
+
+    @include desktop {
+      margin-bottom: 52px;
+    }
+  }
+
+  .tab {
+    margin-right: 32px;
+  }
+
+  @import '../../shared/360/index.scss';
+}

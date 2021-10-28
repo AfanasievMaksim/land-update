@@ -1,0 +1,76 @@
+.layouts {
+  .section-title {
+    padding-bottom: 17px;
+    margin-bottom: 16px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 1px;
+      width: 60px;
+      background: #E3E4E8;
+      left: 0;
+      bottom: 0;
+    }
+  }
+
+  .section-subtitle {
+    max-width: 435px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 26px;
+    color: #686C7D;
+    text-align: left;
+
+    @include desktop {
+      margin-bottom: 52px;
+    }
+  }
+
+  &.second-screen {
+    @include custom-media-max(1024px) {
+      .layouts-section__info {
+        display: none;
+      }
+  
+      .layouts-section__actions {
+        display: block;
+      }
+
+      .section-action--second-screen {
+        display: inline-flex;
+        align-items: center;
+      }
+    }
+  }
+
+  .section-action--second-screen {
+    display: none;
+    margin-bottom: 36px;
+
+    @include desktop {
+      display: none;
+    }
+
+    .section-action__icon {
+      margin-right: 8px;
+    }
+
+    .section-action__text {
+      display: block;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 18px;
+      color: #C0C0C8;
+    }
+  }
+
+  .layouts-section {
+    @include desktop {
+      padding: 0;
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+}

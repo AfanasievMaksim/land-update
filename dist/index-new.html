@@ -53,7 +53,7 @@
       <a href="tel:0901115445" class="header-info__tel">
         090 111 5445
       </a>
-      <div class="header-info__text desk" data-toggle="modal" data-target="#modal-recall-green-btn">
+      <div class="header-info__text desk" data-toggle="modal" data-target="#modal-recall-new">
         <span class="dots"></span> <span class="text">Đang hoạt động</span>
       </div>
     </div>
@@ -63,7 +63,7 @@
       </a>
       <!-- <a href="viber://pa/info?uri=whitemark" target="_blank" class="header-social__item"><img src="img/icon-messanger-4.svg" alt=""></a> -->
     </div>
-    <div class="header__btn btn-new desk" data-toggle="modal" data-target="#modal-recall-header-btn">
+    <div class="header__btn btn-new desk" data-toggle="modal" data-target="#modal-recall-new">
       <span class="btn-new__text">
         Yêu cầu gọi lại
       </span>
@@ -72,40 +72,83 @@
   <div class="menu">
     <div class="menu__container">
       <div class="menu__close"></div>
-      <nav class="menu-nav">
-        <a href="#home" class="menu-nav__item">
-          Trang chủ
+      <h4 class="menu-title">
+        Menu
+      </h4>
+      <nav class="navigations">
+        <a class="navigation active">
+          The Opera Residence
         </a>
-        <a href="#gallery" class="menu-nav__item">
-          Hình ảnh
+        <a href="#general-description" class="navigation">
+          General description
         </a>
-        <a href="#filter" class="menu-nav__item">
-          Sơ đồ
+        <a href="#about-top" class="navigation">
+          About
         </a>
-        <a href="#progres" class="menu-nav__item">
-          Vị trí
+        <a href="#advantages" class="navigation">
+          Advantages
         </a>
-        <a href="#map" class="menu-nav__item">
-          Liên hệ
+        <a href="#photos" class="navigation">
+          Photos
+        </a>
+        <a href="#layouts" class="navigation">
+          Layouts
+        </a>
+        <a href="#download-presentation" class="navigation">
+          Trình bày
+        </a>
+        <a href="#who-builds" class="navigation">
+          Who builds
+        </a>
+        <a href="#construction-monitoring" class="navigation">
+          Construction monitoring
+        </a>
+        <a href="#payments" class="navigation">
+          Payments
+        </a>
+        <a href="#contacts" class="navigation">
+          Contacts
         </a>
       </nav>
 
-      <div class="menu-help">
-        <img src="img/reviews/daisy.png" alt="" class="menu-help__image" />
-        <p class="menu-help__text">
-          Bạn cần trợ giúp? <br />
-          Hãy gọi hay nhắn tin cùng chuyên gia dự án
-        </p>
+      <div class="cta">
+        <div class="cta__inner">
+          <div class="cta-photo">
+            <img data-src="img/new/tina.png" alt="" width="136" height="136" class="lazy cta-photo__img">
+          </div>
+          <div class="cta__content">
+            <h3 class="cta__title">
+              TINA TRUONG
+            </h3>
+            <p class="cta__desk">
+              Bạn cần trợ giúp? <br>
+              Hãy gọi hay nhắn tin cùng chuyên gia dự án
+            </p>
+            <div class="cta__intrractive">
+              <a href="tel:0901115455" class="cta__tel">
+                090 111-54-55
+              </a>
+              <a href="http://m.me/whitemarkestate" class="cta-fb">
+                <img data-src="img/new/fb-logo.svg" width="107" height="32" class="cta-fb__img lazy" alt="">
+              </a>
+              <div class="cta__actions">
+                <button class="btn-new" data-toggle="modal" data-target="#modal-recall-new">
+                  <span class="btn-new__text">
+                    Yêu cầu gọi lại
+                  </span></button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="menu-social">
-        <a href="http://m.me/whitemarkestate" target="_blank" class="menu-social__item"
-          ><img src="img/icon-messanger-1.svg" alt=""
-        /></a>
-        <!-- <a href="viber://pa/info?uri=whitemark" target="_blank" class="menu-social__item"><img src="img/icon-messanger-4.svg" alt=""></a> -->
+
+      <div class="menu-actions">
+        <button class="btn-new btn-new--black" data-toggle="modal" data-target="#modal-download-new">
+          <img class="btn-new__icon lazy" data-src="img/new/download-icon.svg" >
+          <span class="btn-new__text">
+            Tải về tổng quan dự án <span>PDF, 3MB</span>
+          </span></button>
       </div>
-      <a href="tel:0901115445" class="menu-tel">
-        090 111 5445
-      </a>
     </div>
   </div>
 </header>
@@ -1911,7 +1954,7 @@
     </div>
   </div>
 </div>
-                <div id="tab-2d" class="layouts-section__tab-content layouts-section__tab-content--2d active">
+                <div id="tab-2d" data-id="tab-2d" class="layouts-section__tab-content layouts-section__tab-content--2d active">
                   <div class="mini-modal modal-custom--small fade" id="mini-modal-book-consultation">
   <div class="mini-modal__content">
     <div class="mini-modal-header">
@@ -2014,7 +2057,7 @@
                     </span></button>
                   </div>
                 </div>
-                <div id="tab-3d" class="layouts-section__tab-content layouts-section__tab-content--3d">
+                <div id="tab-3d" data-id="tab-3d" class="layouts-section__tab-content layouts-section__tab-content--3d">
                   <div class="mini-modal modal-custom--small fade" id="mini-modal-book-journey">
   <div class="mini-modal__content">
     <div class="mini-modal-header">

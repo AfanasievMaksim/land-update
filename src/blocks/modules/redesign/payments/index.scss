@@ -1,0 +1,100 @@
+.payments {
+  .section-title {
+    max-width: 726px;
+    padding-bottom: 17px;
+    margin-bottom: 16px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 1px;
+      width: 60px;
+      background: #E3E4E8;
+      left: 0;
+      bottom: 0;
+    }
+  }
+
+  .section-subtitle {
+    max-width: 518px;
+    margin-bottom: 32px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 26px;
+    color: #686C7D;
+    text-align: left;
+
+    @include desktop {
+      margin-bottom: 48px;
+    }
+  }
+
+  .items {
+    display: flex;
+  }
+
+  .item {
+    margin-right: 24px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    @include mob {
+      margin-right: 40px;
+    }
+
+    @include desktop {
+      margin-right: 112px;
+    }
+  }
+
+  .item-title {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0.02em;
+    color: #BABBC5;
+  }
+
+  .item-numbers {
+    color: #12A3EC;
+    margin-top: -4px;
+
+    @include desktop {
+      margin-top: 8px;
+    }
+  }
+
+  .item-numbers__big {
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 72px;
+    font-family: 'STIX Two Text', serif;
+
+    @include desktop {
+      font-size: 96px;
+    }
+  }
+
+  .item-numbers__small {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+
+    @include desktop {
+      font-size: 16px;
+      line-height: 26px;
+      letter-spacing: 0;
+    }
+  }
+
+  .section-actions {
+    margin-top: 40px;
+
+    @include desktop {
+      margin-top: 56px;
+    }
+  }
+}

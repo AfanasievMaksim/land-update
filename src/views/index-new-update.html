@@ -25,7 +25,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500&family=STIX+Two+Text:wght@600&display=swap&subset=vietnamese" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=vietnamese" rel="stylesheet">
-        <link rel="stylesheet" href="styles/index.css">
+        <link rel="stylesheet" href="styles/index-new.css">
     </head>
     <body class="blue no-vaucher">
         <!-- Google Tag Manager (noscript) -->
@@ -44,11 +44,29 @@
             @@include("../blocks/modules/redesign/about-bottom/index.html")
             @@include("../blocks/modules/redesign/download-presentation/index.html")
             @@include("../blocks/modules/redesign/who-builds/index.html")
+            @@include("../blocks/modules/redesign/construction-monitoring/index.html")
+            @@include("../blocks/modules/redesign/payments/index.html")
+            @@include("../blocks/modules/redesign/calculator/index.html")
+            @@include("../blocks/modules/redesign/contacts/index.html")
         </main>
         
-        @@include("../blocks/modules/footer/index.html")
-        @@include("../blocks/modules/modal/index.html")
-        @@include("../blocks/modules/cta/index.html")
+        @@include("../blocks/modules/redesign/footer/index.html")
+
+        @@include("../blocks/modules/modal/index-new.html")
+        <script>
+          var costRangeStep = 1;
+          var costRangeFrom = 0;
+          var costRangeTo = 11;
+          var costRangeStart = 6;
+          var mortgageRangeStep = 5;
+          var mortgageRangeFrom = 0;
+          var mortgageRangeTo = 80;
+          var mortgageRangeStart = 50;
+          var yearRangeStep = 5;
+          var yearRangeFrom = 0;
+          var yearRangeTo = 30;
+          var yearRangeStart = 15;
+      </script>
         <!-- <script>
             var fired = false;
             window.addEventListener("scroll", function() {
@@ -65,62 +83,6 @@
                 }
             });
         </script> -->
-        <script>
-            var costRangeStep = 1;
-            var costRangeFrom = 0;
-            var costRangeTo = 11;
-            var costRangeStart = 6;
-            var mortgageRangeStep = 5;
-            var mortgageRangeFrom = 0;
-            var mortgageRangeTo = 80;
-            var mortgageRangeStart = 50;
-            var yearRangeStep = 5;
-            var yearRangeFrom = 0;
-            var yearRangeTo = 30;
-            var yearRangeStart = 15;
-            var initialData = [
-                {
-                    title: "Shophouse",
-                    room: 4,
-                    floorFrom: 1,
-                    floorTo: 2,
-                    roomImage: "img/room/shophouse.svg",
-                    areaFrom: 100,
-                    areaTo: 185,
-                    areaPrice: 80000000,
-                },
-                {
-                    title: "1PN",
-                    room: 1,
-                    floorFrom: 13,
-                    floorTo: 23,
-                    roomImage: "img/room/1pn.svg",
-                    areaFrom: 35,
-                    areaTo: 48,
-                    areaPrice: 80000000,
-                },
-                {
-                    title: "2PN",
-                    room: 2,
-                    roomImage: "img/room/2pn.svg",
-                    floorFrom: 13,
-                    floorTo: 23,
-                    areaFrom: 71,
-                    areaTo: 95,
-                    areaPrice: 80000000,
-                },
-                {
-                    title: "3PN",
-                    room: 3,
-                    roomImage: "img/room/3pn.svg",
-                    floorFrom: 12,
-                    floorTo: 23,
-                    areaFrom: 103,
-                    areaTo: 130,
-                    areaPrice: 80000000,
-                }
-            ];
-        </script>
         <script src="js/main.js"></script> 
         <script src="js/roistat.js"></script>
         <!-- <script>(function(w, d, s, h, id) {w.roistatProjectId = id; w.roistatHost = h;var p = d.location.protocol == "https:" ? "https://" : "http://";var u = /^.*roistat_visit=[^;]+(.*)?$/.test(d.cookie) ? "/dist/module.js" : "/api/site/1.0/"+id+"/init";var js = d.createElement(s); js.charset="UTF-8"; js.async = 1; js.src = p+h+u; var js2 = d.getElementsByTagName(s)[0]; js2.parentNode.insertBefore(js, js2);})(window, document, 'script', 'cloud.roistat.com', '9086e11957dacf352fa76e4b46f732d0');</script> -->

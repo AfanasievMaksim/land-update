@@ -2,12 +2,11 @@
   font-family: 'Lexend', sans-serif;
   position: fixed;
   width: 100%;
-  // z-index: 1060;
   z-index: 10;
   background-color: #fff;
 
   @include desktop {
-    z-index: 10;
+    z-index: 50;
   }
 
   &.active {
@@ -230,7 +229,6 @@
       }
 
       &__item {
-        // display: inline-block;
         margin-left: 6px;
   
         img {
@@ -243,17 +241,45 @@
   .menu {
     display: none;
     position: fixed;
-    height: 100vh;
     width: 100%;
-    max-width: 468px;
+    max-width: 1060px;
     z-index: 11;
     top: 0;
     left: 0;
-    background: rgba(25, 27, 25, 0.99);
-    overflow: auto;
     transform: translateX(-100%);
     transition: .3s;
     opacity: 0;
+
+    &::before {
+      content: "";
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      background: rgba(112, 116, 134, 0.55);
+      backdrop-filter: blur(50px);
+      pointer-events: none;
+      opacity: 0;
+      transform: translateX(100%);
+      transition: .3s;
+    }
+
+    .menu__container {
+      height: 100vh;
+      overflow-y: auto;
+      position: relative;
+      z-index: 2;
+      padding: 20px 15px;
+      background: #FFFFFF;
+
+      @include desktop-full {
+        padding-top: 84px;
+        padding-right: 130px;
+        padding-left: 130px;
+        padding-bottom: 40px;
+      }
+    }
 
     &.visible {
       display: block;
@@ -263,84 +289,217 @@
       transform: translateX(0);
       transition: .3s;
       opacity: 1;
+
+      &::before {
+        opacity: 1;
+        transform: translateX(0);
+        transition: .3s;
+      }
     }
 
     .menu__close {
-      position: absolute;
-      width: 23px;
-      height: 23px;
-      top: 36px;
-      right: 26px;
+      width: 32px;
+      height: 32px;
       background-repeat: no-repeat;
-      background-image: url(../img/close-icon.svg);
+      background-image: url(../img/new/close-icon.svg);
       background-size: contain;
       cursor: pointer;
-    }
 
-    .menu-nav {
-      padding-top: 50px;
-      text-align: center;
-
-      &__item {
-        display: block;
-        font-weight: 300;
-        font-size: 30px;
-        line-height: 50px;
-        color: #FFFFFF;
-        text-decoration: none;
+      @include desktop-full {
+        position: absolute;
+        top: 30px;
+        left: 50px;
       }
     }
 
-    .menu-help {
-      padding-right: 2px;
-      padding-left: 2px;
-      padding-top: 30px;
+    .menu-title {
+      margin-top: 48px;
+      margin-bottom: 36px;
+      font-weight: 600;
+      font-size: 36px;
+      line-height: 42px;
+      color: #33353D;
+      font-family: 'STIX Two Text', serif;
 
-      &__image {
-        width: 106px;
-        display: block;
-        margin-right: auto;
-        margin-left: auto;
-      }
-
-      &__text {
-        margin-top: 25px;
-        font-size: 16px;
-        line-height: 30px;
-        text-align: center;
-        color: #FFFFFF;
+      @include desktop {
+        margin-top: 0;
+        margin-bottom: 52px;
+        font-size: 64px;
+        line-height: 72px;
       }
     }
 
-    .menu-social {
-      width: 100%;
-      margin-top: 30px;
-      margin-bottom: 30px;
-      display: flex;
-      justify-content: center;
+    .menu-actions {
+      margin-top: 32px;
 
-      &__item {
-        font-size: 0;
-        line-height: 0;
-        margin-right: 6px;
-        margin-left: 6px;
-      }
-
-      img {
-        height: 29px;
+      @include desktop {
+        margin-top: 56px;
       }
     }
 
-    .menu-tel {
-      width: 100%;
-      display: inline-block;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 24px;
+    .navigations {
+      columns: 2;
+      column-gap: 32px;
+      margin-bottom: 36px;
+  
+      @include tablet {
+        columns: 3;
+        column-gap: 96px;
+      }
+
+      @include desktop {
+        margin-bottom: 60px;
+      }
+    }
+  
+    .navigation {
+      display: block;
+      margin-bottom: 16px;
+      font-size: 16px;
       line-height: 24px;
+      text-transform: uppercase;
+      color: #BABBC5;
+      -webkit-column-break-inside: avoid;
+      page-break-inside: avoid;
+      break-inside: avoid;
+      text-decoration: none;
+  
+      &.active {
+        pointer-events: none;
+        color: #33353D;
+        text-decoration: underline;
+      }
+    }
+
+    .cta {
+      padding: 32px 42px;
+      background: #F7F7F8;
+      border-radius: 4px;
+  
+      @include desktop {
+        padding: 26px 48px;
+      }
+    }
+  
+    .cta__inner {
       text-align: center;
-      color: #FFFFFF;
-      padding-bottom: 26px;
+  
+      @include desktop {
+        display: flex;
+        text-align: left;
+      }
+    }
+  
+    .cta-photo {
+      margin-bottom: 12px;
+  
+      @include desktop {
+        margin-bottom: 0;
+        margin-right: 24px;
+        flex-shrink: 0;
+      }
+    }
+  
+    .cta-photo__img {
+      @include desktop {
+        width: 88px;
+        height: 88px;
+      }
+    }
+  
+    .cta__content {
+      @include desktop {
+        flex-shrink: 0;
+        padding-right: 12px;
+      }
+    }
+    
+    .cta__intrractive {
+      @include desktop {
+        display: flex;
+        align-items: center;
+      }
+    }
+  
+    .cta__title {
+      margin-bottom: 16px;
+      font-size: 16px;
+      line-height: 24px;
+      text-transform: uppercase;
+      color: #33353D;
+  
+      @include desktop {
+        margin-bottom: 8px;
+      }
+    }
+  
+    .cta__desk {
+      margin-bottom: 32px;
+      padding-right: 38px;
+      padding-left: 38px;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 22px;
+      letter-spacing: 0.02em;
+      color: #686C7D;
+  
+      @include desktop {
+        padding-left: 0;
+        padding-right: 0;
+        margin-bottom: 16px;
+        max-width: 308px;
+      }
+    }
+  
+    .cta__tel {
+      display: block;
+      margin-bottom: 32px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 36px;
+      line-height: 42px;
+      color: #33353D;
+      font-family: 'STIX Two Text', serif;
+  
+      @include desktop {
+        margin-bottom: 0;
+        margin-right: 24px;
+        flex-shrink: 0;
+      }
+  
+      @include custom-media(1440px) {
+        margin-right: 48px;
+      }
+    }
+  
+    .cta-fb {
+      display: block;
+      margin-bottom: 32px;
+  
+      @include desktop {
+        margin-bottom: 0;
+        margin-right: 24px;
+        flex-shrink: 0;
+      }
+  
+      @include custom-media(1440px) {
+        margin-right: 48px;
+      }
+    }
+  
+    .cta__actions {
+      @include desktop {
+        margin-bottom: 0;
+        flex-shrink: 0;
+      }
+    }
+
+    .menu-actions {
+      margin-top: 32px;
+
+      .btn-new .btn-new__text span {
+        color: #686C7D;
+      }
     }
   }
 }

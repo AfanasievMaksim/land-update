@@ -1,3 +1,7 @@
+@mixin mob {
+  @media (min-width: 375px) { @content; }
+}
+
 @mixin sm {
   @media (min-width: 480px) { @content; }
 }
