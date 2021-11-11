@@ -48,6 +48,24 @@
     text-transform: uppercase;
     color: #BABBC5;
   }
+
+  .tabs-content {
+    position: relative;
+  }
+
+  .tab-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: .1s;
+
+    &.active {
+      position: relative;
+      opacity: 1;
+      transition: .1s;
+    }
+  }
 }
 
 @import '../../shared/layouts/index.scss';

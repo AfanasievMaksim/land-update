@@ -178,6 +178,14 @@ $("#modal-photos").on("hidden.bs.modal", function (e) {
   }
 });
 
+// tabs
+$('[data-tab-id]').on('click', function() {
+  const val = $(this).data('tab-id');
+
+  $(this).addClass('active').siblings().removeClass('active')
+  $(`[data-tab-content="${val}"]`).addClass('active').siblings().removeClass('active')
+})
+
 //360
 init360('#modal-360', 'shown.bs.modal');
 
