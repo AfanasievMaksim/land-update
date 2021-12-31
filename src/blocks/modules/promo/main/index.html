@@ -30,11 +30,36 @@
           <div class="toggle-views__item active" data-view="3d">3D</div>
         </div>
         <div class="iframes">
-          <iframe data-id="ext" id="ext" width="100%" height="500px" data-src="https://vrnet.io/view5.16a/?model=vn/whitemark/opera/ExteriorEvening" class="active iframe lazy" frameborder="0"></iframe>
-          <iframe data-id="oneBr" id="oneBr" width="100%" height="500px" data-src="https://vrnet.io/view5.16a/?model=vn/whitemark/opera/b03_02" class="iframe lazy" frameborder="0"></iframe>
-          <iframe data-id="twoBr" id="twoBr" width="100%" height="500px" data-src="https://vrnet.io/view5.16a/?model=vn/whitemark/opera/a03_01" class="iframe lazy" frameborder="0"></iframe>
-          <iframe data-id="threeBr" id="threeBr" width="100%" height="500px" data-src="https://vrnet.io/view5.16a/?model=vn/whitemark/opera/a03_03a" class="iframe lazy" frameborder="0"></iframe>
-          <iframe data-id="loft" id="loft" width="100%" height="500px" data-src="https://vrnet.io/view5.16a/?model=vn/whitemark/opera/3br" class="iframe lazy" frameborder="0"></iframe>
+          <iframe data-id="ext" id="ext" width="100%" height="500px" data-src="https://vrnet.io/view5.16a/?model=vn/whitemark/opera/ExteriorEvening&buttons=api" class="active iframe lazy" frameborder="0" allowfullscreen="" allow="vr;fullscreen *;xr-spatial-tracking;xr;"></iframe>
+          <iframe data-id="oneBr" id="oneBr" width="100%" height="500px" data-src="https://vrnet.io/view5.16a/?model=vn/whitemark/opera/b03_02&buttons=api" class="iframe lazy" frameborder="0" allowfullscreen="" allow="vr;fullscreen *;xr-spatial-tracking;xr;"></iframe>
+          <iframe data-id="twoBr" id="twoBr" width="100%" height="500px" data-src="https://vrnet.io/view5.16a/?model=vn/whitemark/opera/a03_01&buttons=api" class="iframe lazy" frameborder="0" allowfullscreen="" allow="vr;fullscreen *;xr-spatial-tracking;xr;"></iframe>
+          <iframe data-id="threeBr" id="threeBr" width="100%" height="500px" data-src="https://vrnet.io/view5.16a/?model=vn/whitemark/opera/a03_03a&buttons=api" class="iframe lazy" frameborder="0" allowfullscreen="" allow="vr;fullscreen *;xr-spatial-tracking;xr;"></iframe>
+          <iframe data-id="loft" id="loft" width="100%" height="500px" data-src="https://vrnet.io/view5.16a/?model=vn/whitemark/opera/3br&buttons=api" class="iframe lazy" frameborder="0" allowfullscreen="" allow="vr;fullscreen *;xr-spatial-tracking;xr;"></iframe>
+          <div class="iframes__buttons">
+            <div class="ifranes__buttons-group">
+              <div data-action="walk" class="iframes__button">
+                <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.0113 5.23055C12.4504 5.2164 12.8187 5.04642 13.1162 4.72061C13.4136 4.3948 13.5553 4.01234 13.5411 3.57324C13.527 3.13405 13.3641 2.7587 13.0524 2.44712C12.7408 2.1355 12.3654 1.98677 11.9263 2.00092C11.4872 2.01507 11.1189 2.18505 10.8214 2.51086C10.524 2.83667 10.3752 3.21913 10.3752 3.65823C10.3752 4.09733 10.5381 4.47274 10.8639 4.78435C11.1897 5.09597 11.5722 5.2447 12.0113 5.23055Z" fill="#A52662"/>
+                  <path d="M17.3869 10.6062L15.0497 9.33137L13.1374 6.27172C12.7691 5.81842 12.3159 5.5918 11.7776 5.5918C11.4093 5.5918 11.0552 5.74763 10.7152 6.05924L7.82554 8.99141C7.74055 9.10474 7.6839 9.23223 7.65556 9.37387L7.2731 12.646V12.731C7.2731 12.9293 7.34394 13.0992 7.48558 13.2409C7.62721 13.3825 7.79719 13.4534 7.99552 13.4534C8.19384 13.4534 8.35673 13.3825 8.48421 13.2409C8.6117 13.0992 8.68959 12.9435 8.71794 12.7735L9.0154 9.9688L10.0353 8.94891L9.10039 16.768L7.44308 20.4651C7.38644 20.6351 7.35809 20.7906 7.35809 20.9327C7.35809 21.2438 7.46433 21.5064 7.67681 21.7188C7.88928 21.9313 8.15135 22.0233 8.46297 21.9951C8.88792 21.9951 9.19953 21.7963 9.39786 21.4001L11.1827 17.4055C11.1827 17.377 11.1968 17.3275 11.2252 17.2568C11.2535 17.1858 11.2819 17.122 11.3101 17.0655C11.3385 17.0088 11.3526 16.9521 11.3526 16.8956L11.5651 14.9832L13.3924 21.2726C13.5907 21.7826 13.9448 22.0234 14.4548 21.9951C14.7381 21.9951 14.986 21.8888 15.1984 21.6763C15.4109 21.4639 15.5172 21.2013 15.5172 20.8902C15.5172 20.8614 15.5101 20.8264 15.4959 20.7839C15.4818 20.7414 15.4747 20.7059 15.4747 20.6776L12.925 11.9661L13.2224 9.11889L13.9448 10.2663C14.0015 10.3513 14.0723 10.4221 14.1573 10.4787L16.6645 11.8811C16.8345 11.9377 16.9478 11.9661 17.0045 11.9661C17.2028 11.9661 17.3728 11.8882 17.5144 11.7323C17.6561 11.5765 17.7269 11.3994 17.7269 11.2012C17.7269 10.9462 17.6136 10.7479 17.3869 10.6062Z" fill="#A52662"/>
+                  </svg>
+              </div>
+              <div data-action="orbit" class="iframes__button active">
+                <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle class="stroke" cx="12.5" cy="12" r="9.25" stroke="#A52662" stroke-width="1.5"/>
+                  <circle class="fill" cx="12.5" cy="12" r="3" fill="#A52662"/>
+                  <circle class="fill" cx="19.4375" cy="6.125" r="2" fill="#A52662"/>
+                  </svg>
+              </div>
+            </div>
+            <div class="ifranes__buttons-group">
+              <div data-action="screenshot" class="iframes__button">
+                <img data-src="img/promo/screenshot.svg" width="24" height="24" class="lazy" alt="instruction">
+              </div>
+              <div data-action="fullscreen" class="iframes__button">
+                <img data-src="img/promo/fullscreen.svg" width="24" height="24" class="lazy" alt="instruction">
+              </div>
+            </div>
+          </div>
         </div>
         <div class="instructions">
           <h3 class="instructions__title">Cách sử dụng</h3>
@@ -55,12 +80,6 @@
               <img data-src="img/promo/screenshot.svg" width="24" height="24" class="lazy instruction__img" alt="instruction">
               <p class="instruction__text">
                 Nhấp trái để chụp màn hình mong muốn
-              </p>
-            </div>
-            <div class="instruction">
-              <img data-src="img/promo/faq.svg" width="24" height="24" class="lazy instruction__img" alt="instruction">
-              <p class="instruction__text">
-                Nhấp trái để biết cách sử dụng Opera Tour
               </p>
             </div>
             <div class="instruction">

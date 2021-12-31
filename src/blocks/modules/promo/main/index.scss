@@ -359,4 +359,87 @@
     height: auto;
     min-height: auto !important;
   }
+
+  .iframes__buttons {
+    opacity: 0;
+    pointer-events: none;
+
+    &.active {
+      opacity: 1;
+      pointer-events: initial;
+    }
+  }
+
+  .ifranes__buttons-group {
+    display: flex;
+    position: absolute;
+    bottom: 20px;
+    z-index: 2;
+
+    &:first-child {
+      left: 20px;
+    }
+
+    &:last-child {
+      right: 20px;
+    }
+  }
+
+  .iframes__button {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 16px;
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: rgb(0, 0, 0.3) 1px 1px 1px 0px;
+    border-radius: 50%;
+    cursor: pointer;
+
+    svg path,
+    svg .fill {
+      fill: #FFF;
+    }
+
+    svg .stroke {
+      stroke: #FFF;
+    }
+
+    &.active {
+      pointer-events: none;
+      svg path,
+      svg .fill {
+        fill: #A52662;
+      }
+
+      svg .stroke {
+        stroke: #A52662;
+      }
+    }
+
+    &:hover {
+      svg path,
+      svg .fill {
+        fill: #A52662;
+      }
+
+      svg .stroke {
+        stroke: #A52662;
+      }
+
+      background-color: rgba(255, 255, 255, 1);
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+.unsupported-fullscreen {
+  .instruction:last-child,
+  [data-action="fullscreen"] {
+    display: none;
+  }
 }
